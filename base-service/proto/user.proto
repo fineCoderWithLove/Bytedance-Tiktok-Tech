@@ -1,0 +1,22 @@
+syntax = "proto3";
+package pb;
+option go_package = "./";
+//import "google/protobuf/timestamp.proto";
+service User {
+    rpc GetUserVideo (userPrimary) returns (VideoInfo); //查询用户的列表
+}
+
+message userPrimary {
+    int32 userId = 1;
+}
+
+// demo 仅作示例返回发布的视频信息
+message VideoInfo {
+    int32 videoId = 1;
+    string playUrl = 2;
+    string coverUrl = 3;
+    int32 favoriteCount = 4;
+    int32 commentCount = 5;
+    string title =6;
+//    google.protobuf.Timestamp createdTime = 7;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package pb;
+option go_package = "./";
+
+service User {
+    rpc GetUserVideo (userPrimary) returns (UserInfo); //查询用户的列表
+}
+
+message userPrimary {
+    int32 userId = 1;
+}
+
+// demo 仅作示例返回发布的视频信息
+message UserInfo {
+    string videoUrl = 1;
+}
