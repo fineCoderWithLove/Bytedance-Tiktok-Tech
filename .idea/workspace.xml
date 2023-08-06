@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="" />
+    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/base-service/test/user_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/global/global.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/model/UserInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/model/UserInfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/proto/user.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/proto/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/proto/user_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/api/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/api/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/globalinit/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/globalinit/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/proto/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/proto/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/proto/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/proto/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/proto/user_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/router/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,32 +43,35 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="2TT3UoAjMnX4F88Kq13NhfTPnpm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/douyin-api/globalinit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api" />
-      <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api\proto" />
       <recent name="D:\Go_WorkSpace\src\douyin\douyin-api\globalinit" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service\init" />
       <recent name="D:\Go_WorkSpace\src\douyin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api" />
+      <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -63,15 +86,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build user.go">
-    <configuration name="go build douyin" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="douyin" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build douyin/base-service">
     <configuration name="go build douyin/base-service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
       <working_directory value="$PROJECT_DIR$/base-service" />
@@ -86,21 +101,49 @@
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/douyin-api/main.go" />
       <package value="douyin/douyin-api" />
+      <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build user.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLogin in douyin/base-service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/douyin-api" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/douyin-api/api/user.go" />
+      <working_directory value="$PROJECT_DIR$/base-service/test" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/test" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestLogin$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRegisterUser in douyin/base-service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/base-service/test" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/test" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestRegisterUser$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSelectUserDetail in douyin/base-service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/base-service/test" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/test" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSelectUserDetail$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build douyin/base-service" />
-        <item itemvalue="Go Build.go build user.go" />
         <item itemvalue="Go Build.go build douyin/douyin-api" />
-        <item itemvalue="Go Build.go build douyin" />
+        <item itemvalue="Go Build.go build douyin/base-service" />
+        <item itemvalue="Go Test.TestSelectUserDetail in douyin/base-service/test" />
+        <item itemvalue="Go Test.TestLogin in douyin/base-service/test" />
+        <item itemvalue="Go Test.TestRegisterUser in douyin/base-service/test" />
       </list>
     </recent_temporary>
   </component>
@@ -112,7 +155,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

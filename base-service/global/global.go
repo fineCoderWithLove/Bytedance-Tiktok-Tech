@@ -5,6 +5,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/go-redis/redis"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -13,9 +14,14 @@ import (
 var (
 	DB *gorm.DB
 )
+var (
+	RS *redis.Client
+)
 
 func init() {
-	// 参考 https://github.com/go-sql-driver/mysql#dsn-data-source-name 获取详情
+/*
+	mysql的全局连接
+ */
 	dsn := "root:0927@tcp(43.143.80.216:3306)/douyin?charset=utf8mb4&parseTime=True&loc=Local"
 	newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer
@@ -27,21 +33,15 @@ func init() {
 			Colorful:                  true,        // Disable color
 		},
 	)
-
-	// Globally mode\
-
 	DB, _ = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		Logger: newLogger,
 	})
-
-	//if err!= nil {
-	//	panic("no databases name")
-	//}
-	//// 迁移 schema
-	//err = db.AutoMigrate(&User3{})
-	//if err != nil {
-	//	panic("fail to migrate table")
-	//}else {
-	//	fmt.Println("success to create")
-	//}
+	/*
+	redis的全局连接
+	 */
+	RS = redis.NewClient(&redis.Options{
+		Addr:     "43.143.44.118:9898", // Redis 服务器地址和端口
+		Password: "192047",             // Redis 服务器密码，如果没有设置密码则为空字符串
+		DB:       0,                    // Redis 数据库索引，默认为 0
+	})
 }

@@ -4,7 +4,7 @@
 // - protoc             v3.14.0
 // source: user.proto
 
-package __
+package pb
 
 import (
 	context "context"
@@ -19,89 +19,163 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	User_GetUserVideo_FullMethodName = "/pb.User/GetUserVideo"
+	UserService_UserRegister_FullMethodName = "/pb.UserService/UserRegister"
+	UserService_UserLogin_FullMethodName    = "/pb.UserService/UserLogin"
+	UserService_UserDetail_FullMethodName   = "/pb.UserService/UserDetail"
 )
 
-// UserClient is the client API for User service.
+// UserServiceClient is the client API for UserService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type UserClient interface {
-	GetUserVideo(ctx context.Context, in *UserPrimary, opts ...grpc.CallOption) (*UserInfo, error)
+type UserServiceClient interface {
+	UserRegister(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterOrLoginInfoResp, error)
+	UserLogin(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*RegisterOrLoginInfoResp, error)
+	UserDetail(ctx context.Context, in *DetailRep, opts ...grpc.CallOption) (*UserDetailResp, error)
 }
 
-type userClient struct {
+type userServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewUserClient(cc grpc.ClientConnInterface) UserClient {
-	return &userClient{cc}
+func NewUserServiceClient(cc grpc.ClientConnInterface) UserServiceClient {
+	return &userServiceClient{cc}
 }
 
-func (c *userClient) GetUserVideo(ctx context.Context, in *UserPrimary, opts ...grpc.CallOption) (*UserInfo, error) {
-	out := new(UserInfo)
-	err := c.cc.Invoke(ctx, User_GetUserVideo_FullMethodName, in, out, opts...)
+func (c *userServiceClient) UserRegister(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterOrLoginInfoResp, error) {
+	out := new(RegisterOrLoginInfoResp)
+	err := c.cc.Invoke(ctx, UserService_UserRegister_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// UserServer is the server API for User service.
-// All implementations must embed UnimplementedUserServer
+func (c *userServiceClient) UserLogin(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*RegisterOrLoginInfoResp, error) {
+	out := new(RegisterOrLoginInfoResp)
+	err := c.cc.Invoke(ctx, UserService_UserLogin_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userServiceClient) UserDetail(ctx context.Context, in *DetailRep, opts ...grpc.CallOption) (*UserDetailResp, error) {
+	out := new(UserDetailResp)
+	err := c.cc.Invoke(ctx, UserService_UserDetail_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// UserServiceServer is the server API for UserService service.
+// All implementations must embed UnimplementedUserServiceServer
 // for forward compatibility
-type UserServer interface {
-	GetUserVideo(context.Context, *UserPrimary) (*UserInfo, error)
-	mustEmbedUnimplementedUserServer()
+type UserServiceServer interface {
+	UserRegister(context.Context, *RegisterReq) (*RegisterOrLoginInfoResp, error)
+	UserLogin(context.Context, *LoginReq) (*RegisterOrLoginInfoResp, error)
+	UserDetail(context.Context, *DetailRep) (*UserDetailResp, error)
+	mustEmbedUnimplementedUserServiceServer()
 }
 
-// UnimplementedUserServer must be embedded to have forward compatible implementations.
-type UnimplementedUserServer struct {
+// UnimplementedUserServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedUserServiceServer struct {
 }
 
-func (UnimplementedUserServer) GetUserVideo(context.Context, *UserPrimary) (*UserInfo, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetUserVideo not implemented")
+func (UnimplementedUserServiceServer) UserRegister(context.Context, *RegisterReq) (*RegisterOrLoginInfoResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UserRegister not implemented")
 }
-func (UnimplementedUserServer) mustEmbedUnimplementedUserServer() {}
+func (UnimplementedUserServiceServer) UserLogin(context.Context, *LoginReq) (*RegisterOrLoginInfoResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UserLogin not implemented")
+}
+func (UnimplementedUserServiceServer) UserDetail(context.Context, *DetailRep) (*UserDetailResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UserDetail not implemented")
+}
+func (UnimplementedUserServiceServer) mustEmbedUnimplementedUserServiceServer() {}
 
-// UnsafeUserServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to UserServer will
+// UnsafeUserServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to UserServiceServer will
 // result in compilation errors.
-type UnsafeUserServer interface {
-	mustEmbedUnimplementedUserServer()
+type UnsafeUserServiceServer interface {
+	mustEmbedUnimplementedUserServiceServer()
 }
 
-func RegisterUserServer(s grpc.ServiceRegistrar, srv UserServer) {
-	s.RegisterService(&User_ServiceDesc, srv)
+func RegisterUserServiceServer(s grpc.ServiceRegistrar, srv UserServiceServer) {
+	s.RegisterService(&UserService_ServiceDesc, srv)
 }
 
-func _User_GetUserVideo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UserPrimary)
+func _UserService_UserRegister_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RegisterReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetUserVideo(ctx, in)
+		return srv.(UserServiceServer).UserRegister(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetUserVideo_FullMethodName,
+		FullMethod: UserService_UserRegister_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetUserVideo(ctx, req.(*UserPrimary))
+		return srv.(UserServiceServer).UserRegister(ctx, req.(*RegisterReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// User_ServiceDesc is the grpc.ServiceDesc for User service.
+func _UserService_UserLogin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LoginReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServiceServer).UserLogin(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: UserService_UserLogin_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServiceServer).UserLogin(ctx, req.(*LoginReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _UserService_UserDetail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DetailRep)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServiceServer).UserDetail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: UserService_UserDetail_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServiceServer).UserDetail(ctx, req.(*DetailRep))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// UserService_ServiceDesc is the grpc.ServiceDesc for UserService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var User_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "pb.User",
-	HandlerType: (*UserServer)(nil),
+var UserService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "pb.UserService",
+	HandlerType: (*UserServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "GetUserVideo",
-			Handler:    _User_GetUserVideo_Handler,
+			MethodName: "UserRegister",
+			Handler:    _UserService_UserRegister_Handler,
+		},
+		{
+			MethodName: "UserLogin",
+			Handler:    _UserService_UserLogin_Handler,
+		},
+		{
+			MethodName: "UserDetail",
+			Handler:    _UserService_UserDetail_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
