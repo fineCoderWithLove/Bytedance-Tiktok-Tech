@@ -1,4 +1,4 @@
-package __
+package proto
 
 import (
 	proto "github.com/golang/protobuf/proto"
