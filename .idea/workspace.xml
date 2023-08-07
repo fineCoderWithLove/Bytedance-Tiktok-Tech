@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="Default Changelist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/handler/followHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/handler/relationHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/proto/socialFunction.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/proto/socialFunction.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/proto/socialFunction.proto" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/proto/socialFunction.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/router/followRoute.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/router/relationRoute.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/service/followService.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/service/relationService.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

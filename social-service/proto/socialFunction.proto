@@ -2,45 +2,45 @@ syntax = "proto3";
 package pb;
 option go_package = "./";
 
-message SocialFollowFunctionRequest {
+message SocialRelationActionRequest {
     string token = 1;
     int64 to_user_id = 2;
     int32 action_type = 3;
 }
 
-message SocialFollowFunctionResponse {
+message SocialRelationActionResponse {
     int32 status_code = 1;
     string status_msg = 2;
 }
 
-message SocialFollowListRequest {
+message SocialRelationFollowListRequest {
     int64 user_id = 1;
     string token = 2;
 }
 
-message SocialFollowListResponse {
-    int32 status_code = 1;
-    string status_msg = 2;
-    repeated User user_list = 3;
-}
-
-message SocialFollowerListRequest {
-    int64 user_id = 1;
-    string token = 2;
-}
-
-message SocialFollowerListResponse {
+message SocialRelationFollowListResponse {
     int32 status_code = 1;
     string status_msg = 2;
     repeated User user_list = 3;
 }
 
-message SocialFriendListRequest {
+message SocialRelationFollowerListRequest {
     int64 user_id = 1;
     string token = 2;
 }
 
-message SocialFriendListResponse {
+message SocialRelationFollowerListResponse {
+    int32 status_code = 1;
+    string status_msg = 2;
+    repeated User user_list = 3;
+}
+
+message SocialRelationFriendListRequest {
+    int64 user_id = 1;
+    string token = 2;
+}
+
+message SocialRelationFriendListResponse {
     int32 status_code = 1;
     string status_msg = 2;
     repeated User user_list = 3;
@@ -51,14 +51,14 @@ message User {
     string name = 2;
 }
 
-message SocialMessagePostRequest {
+message SocialMessageChatRequest {
     string token = 1;
     int64 to_user_id = 2;
     int32 action_type = 3;
     string content = 4;
 }
 
-message SocialMessagePostResponse {
+message SocialMessageChatResponse {
     int32 status_code = 1;
     string status_msg = 2;
 }
@@ -83,14 +83,14 @@ message SocialMessageHistoryResponse {
     repeated Message message_list = 3;
 }
 
-service FollowService {
-    rpc SocialFollowFunction(SocialFollowFunctionRequest) returns (SocialFollowFunctionResponse) {}
-    rpc SocialFollowList(SocialFollowListRequest) returns (SocialFollowListResponse) {}
-    rpc SocialFollowerList(SocialFollowerListRequest) returns (SocialFollowerListResponse) {}
-    rpc SocialFriendList(SocialFriendListRequest) returns (SocialFriendListResponse) {}
+service RelationService {
+    rpc SocialRelationAction(SocialRelationActionRequest) returns (SocialRelationActionResponse) {}
+    rpc SocialRelationFollowList(SocialRelationFollowListRequest) returns (SocialRelationFollowListResponse) {}
+    rpc SocialRelationFollowerList(SocialRelationFollowerListRequest) returns (SocialRelationFollowerListResponse) {}
+    rpc SocialRelationFriendList(SocialRelationFriendListRequest) returns (SocialRelationFriendListResponse) {}
 }
 
 service MessageService {
-    rpc SocialMessagePost(SocialMessagePostRequest) returns (SocialMessagePostResponse) {}
+    rpc SocialMessageChat(SocialMessageChatRequest) returns (SocialMessageChatResponse) {}
     rpc SocialMessageHistory(SocialMessageHistoryRequest) returns (SocialMessageHistoryResponse) {}
 }
