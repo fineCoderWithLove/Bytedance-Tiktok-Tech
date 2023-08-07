@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="" />
+    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,29 +31,22 @@
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/douyin-api/globalinit" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "last_opened_file_path": "D:/aaaaaaSpace/Go/goTikTok/social-service/router"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\router" />
       <recent name="D:\Go_WorkSpace\src\douyin\douyin-api\globalinit" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service\init" />
       <recent name="D:\Go_WorkSpace\src\douyin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\proto" />
       <recent name="D:\Go_WorkSpace\src\douyin\douyin-api" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
     </key>
