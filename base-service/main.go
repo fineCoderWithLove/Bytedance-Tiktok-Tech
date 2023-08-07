@@ -19,7 +19,7 @@ func main()  {
 	fmt.Println("  Service is running")
 	server := grpc.NewServer()
 	//pb.RegisterUserServer(server,&handler.UserServe{})
-	pb.RegisterUserServer(server,&handler.UserServe{})
+	pb.RegisterUserServiceServer(server,&handler.UserServe{})
 	lis,err := net.Listen("tcp",fmt.Sprintf("%s:%d",*IP,*Port))
 	if err != nil {
 		panic("faild to liston "+err.Error())

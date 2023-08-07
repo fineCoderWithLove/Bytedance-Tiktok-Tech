@@ -11,7 +11,7 @@ import (
  */
 func Routers() *gin.Engine {
 	Router := gin.Default()
-	ApiGroup := Router.Group("/v1") //这是一个全局的
+	ApiGroup := Router.Group("") //这是一个全局的
  	router.InitUserRouter(ApiGroup)
 	return Router
 }
