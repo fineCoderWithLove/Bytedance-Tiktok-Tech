@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="">
-<<<<<<< HEAD
+    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="Default Changelist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-=======
-      <change afterPath="$PROJECT_DIR$/base-service/test/user_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/global/global.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/handler/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/model/UserInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/model/UserInfo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/proto/user.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/proto/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/proto/user_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/douyin-api/api/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/api/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/douyin-api/globalinit/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/globalinit/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/douyin-api/proto/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/proto/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/douyin-api/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/proto/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/douyin-api/proto/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/proto/user_grpc.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/douyin-api/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/router/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
->>>>>>> zzt-dev
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,70 +17,81 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Go Application" />
         <option value="Go File" />
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$PROJECT_DIR$/../../../Go" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../sdk/go1.20.6" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="680bdcac-2b2c-4779-ae38-ebc8e400e504" />
+        <option name="url" value="git@github.com:fineCoderWithLove/douyin-base.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2TT3UoAjMnX4F88Kq13NhfTPnpm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-<<<<<<< HEAD
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="1" id="Add" />
-=======
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gin" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
->>>>>>> zzt-dev
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "last_opened_file_path": "D:/aaaaaaSpace/Go/goTikTok/social-service/router"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/aaaaaaSpace/Go/goTikTok/base-service/proto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
+      &quot;protobuf&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-<<<<<<< HEAD
-      <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\router" />
-=======
-      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api\proto" />
->>>>>>> zzt-dev
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\base-service\proto" />
       <recent name="D:\Go_WorkSpace\src\douyin\douyin-api\globalinit" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service\init" />
       <recent name="D:\Go_WorkSpace\src\douyin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-<<<<<<< HEAD
-      <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\proto" />
-=======
->>>>>>> zzt-dev
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\base-service" />
       <recent name="D:\Go_WorkSpace\src\douyin\douyin-api" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
     </key>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Go 构建.go build douyin">
+  <component name="RunManager" selected="Go 构建.go build douyin/base-service">
     <configuration name="go build douyin" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
       <working_directory value="$PROJECT_DIR$" />
@@ -111,21 +100,6 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-=======
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Go Build.go build douyin/base-service">
->>>>>>> zzt-dev
     <configuration name="go build douyin/base-service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
       <working_directory value="$PROJECT_DIR$/base-service" />
@@ -139,73 +113,45 @@
       <working_directory value="$PROJECT_DIR$/douyin-api" />
       <kind value="PACKAGE" />
       <package value="douyin/douyin-api" />
-<<<<<<< HEAD
       <filePath value="$PROJECT_DIR$/douyin-api/main.go" />
-=======
-      <directory value="$PROJECT_DIR$/" />
->>>>>>> zzt-dev
       <method v="2" />
     </configuration>
-    <configuration name="TestLogin in douyin/base-service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build user.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/base-service/test" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="douyin/base-service/test" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestLogin$" />
+      <working_directory value="$PROJECT_DIR$/douyin-api" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/douyin-api/api/user.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestRegisterUser in douyin/base-service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/base-service/test" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="douyin/base-service/test" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestRegisterUser$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSelectUserDetail in douyin/base-service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/base-service/test" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="douyin/base-service/test" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestSelectUserDetail$" />
-      <method v="2" />
-    </configuration>
-<<<<<<< HEAD
-=======
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build douyin/douyin-api" />
-        <item itemvalue="Go Build.go build douyin/base-service" />
-        <item itemvalue="Go Test.TestSelectUserDetail in douyin/base-service/test" />
-        <item itemvalue="Go Test.TestLogin in douyin/base-service/test" />
-        <item itemvalue="Go Test.TestRegisterUser in douyin/base-service/test" />
+        <item itemvalue="Go 构建.go build user.go" />
+        <item itemvalue="Go 构建.go build douyin/douyin-api" />
+        <item itemvalue="Go 构建.go build douyin/base-service" />
+        <item itemvalue="Go 构建.go build douyin" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
->>>>>>> zzt-dev
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>
