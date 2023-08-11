@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="Default Changelist">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/protoeditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/global/global.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/handler/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/model/UserInfo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/proto/user.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/proto/user.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/proto/user_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/globalinit/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/globalinit/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,110 +32,232 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="D:/Go" />
+  <component name="GOROOT" url="file://G:/Go" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="30b43db4-ecd7-42ae-a85f-8506cdef1b7a" />
+        <option name="url" value="https://github.com/fineCoderWithLove/douyin-base.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2TT3UoAjMnX4F88Kq13NhfTPnpm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/douyin-api/globalinit" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/GolandProjects/douyin-base/douyin-api/proto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api" />
-      <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GolandProjects\douyin-base\douyin-api\proto" />
       <recent name="D:\Go_WorkSpace\src\douyin\douyin-api\globalinit" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service" />
       <recent name="D:\Go_WorkSpace\src\douyin\base-service\init" />
       <recent name="D:\Go_WorkSpace\src\douyin" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\GolandProjects\douyin-base\base-service\test" />
+      <recent name="F:\GolandProjects\douyin-base\base-service" />
+      <recent name="F:\GolandProjects\douyin-base\base-service\dao" />
+      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api" />
+      <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Go Build.go build user.go">
-    <configuration name="go build douyin" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 测试.douyin/base-service/handler 中的 TestFavoriteService_TotalFavorite">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="douyin" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="douyin" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build douyin/base-service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/base-service" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/base-service/main.go" />
-      <package value="douyin/base-service" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build douyin/douyin-api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/douyin-api" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/douyin-api/main.go" />
-      <package value="douyin/douyin-api" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build user.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/douyin-api" />
+      <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/douyin-api/api/user.go" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="douyin/base-service/handler 中的 BenchmarkTestFavoriteService_FavoriteAction" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/base-service/handler" />
+      <root_directory value="$PROJECT_DIR$/base-service" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/handler" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gobench" />
+      <pattern value="^\QBenchmarkTestFavoriteService_FavoriteAction\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="douyin/base-service/handler 中的 TestFavoriteService_IsFavorite" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/base-service/handler" />
+      <root_directory value="$PROJECT_DIR$/base-service" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/handler" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestFavoriteService_IsFavorite\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="douyin/base-service/handler 中的 TestFavoriteService_TotalFavorite" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/base-service/handler" />
+      <root_directory value="$PROJECT_DIR$/base-service" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/handler" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestFavoriteService_TotalFavorite\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test douyin/base-service/handler" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/base-service/handler" />
+      <root_directory value="$PROJECT_DIR$/base-service" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/handler" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gobench douyin/base-service/handler" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/base-service/handler" />
+      <root_directory value="$PROJECT_DIR$/base-service" />
+      <kind value="PACKAGE" />
+      <package value="douyin/base-service/handler" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gobench" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build douyin/base-service" />
-        <item itemvalue="Go Build.go build user.go" />
-        <item itemvalue="Go Build.go build douyin/douyin-api" />
-        <item itemvalue="Go Build.go build douyin" />
+        <item itemvalue="Go 测试.douyin/base-service/handler 中的 TestFavoriteService_TotalFavorite" />
+        <item itemvalue="Go 测试.douyin/base-service/handler 中的 BenchmarkTestFavoriteService_FavoriteAction" />
+        <item itemvalue="Go 测试.gobench douyin/base-service/handler" />
+        <item itemvalue="Go 测试.go test douyin/base-service/handler" />
+        <item itemvalue="Go 测试.douyin/base-service/handler 中的 TestFavoriteService_IsFavorite" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
+  </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="*(*&quot;string&quot;)(824635043440)" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/douyin_base$go_test_douyin_base_service_handler.out" NAME="go test douyin/base-service/handler 覆盖结果" MODIFIED="1691664548591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/douyin_base$douyin_base_service_handler__Test_cancelLike.out" NAME="douyin/base-service/handler 中的 Test_cancelLike 覆盖结果" MODIFIED="1691330775830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/douyin_base$douyin_base_service_handler__Test_like.out" NAME="douyin/base-service/handler 中的 Test_like 覆盖结果" MODIFIED="1691331884473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/douyin_base$douyin_base_service_handler__BenchmarkTestFavoriteService_FavoriteAction.out" NAME="douyin/base-service/handler 中的 BenchmarkTestFavoriteService_FavoriteAction 覆盖结果" MODIFIED="1691664716337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/douyin_base$douyin_base_service_handler__TestFavoriteService_FavoriteAction.out" NAME="douyin/base-service/handler 中的 TestFavoriteService_FavoriteAction 覆盖结果" MODIFIED="1691421633997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/douyin_base$douyin_base_service_handler__TestFavoriteService_IsFavorite.out" NAME="douyin/base-service/handler 中的 TestFavoriteService_IsFavorite 覆盖结果" MODIFIED="1691664532332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/douyin_base$gobench_douyin_base_service_handler.out" NAME="gobench douyin/base-service/handler 覆盖结果" MODIFIED="1691664591549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
