@@ -1,0 +1,30 @@
+syntax = "proto3";
+option go_package = "./favorite";
+
+message favorite_action_request {
+  int64 user_id = 1; // 用户id
+  int64 video_id = 2; // 视频id
+  int32 action_type = 3; // 1-点赞，2-取消点赞
+}
+
+message favorite_action_response {
+  int32 status_code = 1; // 状态码，0-成功，其他值-失败
+  optional string status_msg = 2; // 返回状态描述
+}
+
+message is_favorite_request {
+  int64 user_id = 1; // 用户id
+  int64 video_id = 2; // 视频id
+}
+
+message is_favorite_response {
+  int32 status_code = 1; // 状态码，0-成功，其他值-失败
+  bool isFavorite = 2; // 是否喜欢结果
+}
+
+service FavoriteService {
+rpc FavoriteAction (favorite_action_request) returns (favorite_action_response){
+}
+rpc IsFavorite(is_favorite_request) returns (is_favorite_response){
+}
+}

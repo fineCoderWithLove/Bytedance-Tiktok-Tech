@@ -1,0 +1,62 @@
+syntax = "proto3";
+option go_package = "./favorite";
+
+message favorite_action_request {
+  int64 user_id = 1; // 用户id
+  int64 video_id = 2; // 视频id
+  int32 action_type = 3; // 1-点赞，2-取消点赞
+}
+
+message favorite_action_response {
+  int32 status_code = 1; // 状态码，0-成功，其他值-失败
+  optional string status_msg = 2; // 返回状态描述
+}
+
+message is_favorite_request {
+  int64 user_id = 1; // 用户id
+  int64 video_id = 2; // 视频id
+}
+
+message is_favorite_response {
+  int32 status_code = 1; // 状态码，0-成功，其他值-失败
+  bool isFavorite = 2; // 是否喜欢结果
+}
+
+message video_favorite_count_request{
+  int64 video_id=1;
+}
+
+message video_favorite_count_response{
+  int64 count=1;
+  int32 status_code = 2; // 状态码，200-成功，其他值-失败
+  optional string status_msg = 3; // 返回状态描述
+}
+message user_favorite_count_request{
+  int64 user_id=1;
+}
+
+message user_favorite_count_response{
+  int64 count=1;
+  int32 status_code = 2; // 状态码，200-成功，其他值-失败
+  optional string status_msg = 3; // 返回状态描述
+}
+message total_favorite_request{
+  int64 user_id=1;
+}
+message total_favorite_response{
+  int64 total=1;
+  int32 status_code = 2;
+  optional string status_msg = 3;
+}
+service FavoriteService {
+rpc FavoriteAction (favorite_action_request) returns (favorite_action_response){
+}
+rpc IsFavorite(is_favorite_request) returns (is_favorite_response){
+}
+rpc VideoFavoriteCount(video_favorite_count_request) returns (video_favorite_count_response){
+}
+rpc UserFavoriteCount(user_favorite_count_request) returns (user_favorite_count_response){
+}
+rpc TotalFavorite(total_favorite_request) returns (total_favorite_response){
+}
+}
