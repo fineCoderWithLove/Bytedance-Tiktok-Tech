@@ -1,6 +1,7 @@
 syntax = "proto3";
 package pb;
-option go_package = "./";
+import "github.com/golang/protobuf/ptypes/timestamp";
+option go_package = "github.com/golang/protobuf/ptypes/timestamp";
 
 message SocialRelationActionRequest {
     string token = 1;
@@ -47,8 +48,18 @@ message SocialRelationFriendListResponse {
 }
 
 message User {
-    int64 id = 1;
-    string name = 2;
+    int64 user_id = 1;
+    string username = 2;
+    string password = 3;
+    int64 follow_count = 4;
+    int64 follower_count = 5;
+    string avatar = 6;
+    string background_image = 7;
+    string signature = 8;
+    int64 total_favorited = 9;
+    int64 work_count = 10;
+    int64 favorite_count = 11;
+    bool is_follow = 12;
 }
 
 message SocialMessageChatRequest {
@@ -64,11 +75,14 @@ message SocialMessageChatResponse {
 }
 
 message Message {
-    int64 id = 1;
-    string content = 2;
-    int64 create_time = 3;
-    int64 from_user_id = 4;
-    int64 to_user_id = 5;
+    int64 message_id = 1;
+    int64 user_id = 2;
+    int64 to_user_id = 3;
+    string content = 4;
+    string action_type = 5;
+    google.protobuf.Timestamp create_time = 6;
+    google.protobuf.Timestamp update_time = 7;
+    int64 from_user_id = 8;
 }
 
 message SocialMessageHistoryRequest {
@@ -93,4 +107,23 @@ service RelationService {
 service MessageService {
     rpc SocialMessageChat(SocialMessageChatRequest) returns (SocialMessageChatResponse) {}
     rpc SocialMessageHistory(SocialMessageHistoryRequest) returns (SocialMessageHistoryResponse) {}
+}
+
+message Response {
+    string status_msg = 1;
+    int32 status_code = 2;
+}
+
+message ErrorMessage {
+    message Response {
+        string status_msg = 1;
+        int32 status_code = 2;
+    }
+
+}
+
+message Relation {
+    int64 relation_id = 1;
+    int64 user_id = 2;
+    int64 to_user_id = 3;
 }

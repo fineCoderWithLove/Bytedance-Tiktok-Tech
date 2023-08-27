@@ -10,26 +10,23 @@ import (
 	"google.golang.org/grpc"
 )
 
-func main()  {
-	IP := flag.String("ip","127.0.0.1","ip地址")
-	Port := flag.Int("port",8887,"端口号")
+func main() {
+	IP := flag.String("ip", "127.0.0.1", "ip地址")
+	Port := flag.Int("port", 8887, "端口号")
 	flag.Parse()
-	fmt.Print("ip: ",*IP)
-	fmt.Print("  port: ",*Port)
+	fmt.Print("ip: ", *IP)
+	fmt.Print("  port: ", *Port)
 	fmt.Println("  Service is running")
 	server := grpc.NewServer()
 	//pb.RegisterUserServer(server,&handler.UserServe{})
-	pb.RegisterUserServiceServer(server,&handler.UserServe{})
-	lis,err := net.Listen("tcp",fmt.Sprintf("%s:%d",*IP,*Port))
+	pb.RegisterUserServiceServer(server, &handler.UserServe{})
+	lis, err := net.Listen("tcp", fmt.Sprintf("%s:%d", *IP, *Port))
 	if err != nil {
-		panic("faild to liston "+err.Error())
+		panic("faild to liston " + err.Error())
 	}
 	err = server.Serve(lis)
 	if err != nil {
-		panic("faild to start grpc"+err.Error())
+		panic("faild to start grpc" + err.Error())
 	}
 
-
 }
-
-
