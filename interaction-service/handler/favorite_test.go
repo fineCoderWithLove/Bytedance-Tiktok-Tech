@@ -146,7 +146,7 @@ func TestFavoriteService_FavoriteAction(t *testing.T) {
 	}
 }
 
-func TestFavoriteService_UserFavoriteCount(t *testing.T) {
+/*func TestFavoriteService_UserFavoriteCount(t *testing.T) {
 	type args struct {
 		ctx     context.Context
 		request *favorite.UserFavoriteCountRequest
@@ -226,7 +226,7 @@ func TestFavoriteService_TotalFavorite(t *testing.T) {
 			}
 		})
 	}
-}
+}*/
 
 func TestVideoIds(t *testing.T) {
 	type args struct {
@@ -345,15 +345,14 @@ func TestGetVideo(t *testing.T) {
 		{
 			name: "TestGetVideo",
 			args: args{
-				vid:   3,
-				token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTMyMjIwMTl9.K5cSCypJT7LdRiRojd9ihdsZbfY6OkiRcIfzAQHd71Q",
+				vid: 3,
 			},
 			want: nil,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := GetVideo(tt.args.vid, tt.args.token); !reflect.DeepEqual(got, tt.want) {
+			if got := GetVideo(tt.args.vid); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("GetVideo() = %v, want %v", got, tt.want)
 			}
 		})

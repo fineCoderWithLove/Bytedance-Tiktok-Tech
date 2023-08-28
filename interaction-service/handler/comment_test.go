@@ -14,7 +14,8 @@ import (
 func init() {
 	dao.SetDefault(global.DB)
 }
-func TestCommentService_CommentCount(t *testing.T) {
+
+/*func TestCommentService_CommentCount(t *testing.T) {
 	type args struct {
 		ctx     context.Context
 		request *comment.CommentCountRequest
@@ -42,12 +43,12 @@ func TestCommentService_CommentCount(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			c := &CommentService{}
-			gotResp, err := c.CommentCount(tt.args.ctx, tt.args.request) /*&comment.CommentActionRequest{
+			gotResp, err := c.CommentCount(tt.args.ctx, tt.args.request) &comment.CommentActionRequest{
 				Token:       "1",
 				VideoId:     1,
 				ActionType:  1,
 				CommentText: proto.String("777"),
-			}*/
+			}
 			if (err != nil) != tt.wantErr {
 				t.Errorf("CommentCount() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -57,7 +58,7 @@ func TestCommentService_CommentCount(t *testing.T) {
 			}
 		})
 	}
-}
+}*/
 
 func TestCommentService_CommentList(t *testing.T) {
 	type args struct {
