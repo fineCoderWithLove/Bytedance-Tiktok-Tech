@@ -19,9 +19,15 @@ var (
 )
 
 func init() {
+<<<<<<< HEAD
 /*
 	mysql的全局连接
  */
+=======
+	/*
+		mysql的全局连接
+	*/
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 	dsn := "root:0927@tcp(43.143.80.216:3306)/douyin?charset=utf8mb4&parseTime=True&loc=Local"
 	newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer
@@ -37,8 +43,13 @@ func init() {
 		Logger: newLogger,
 	})
 	/*
+<<<<<<< HEAD
 	redis的全局连接
 	 */
+=======
+		redis的全局连接
+	*/
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 	RS = redis.NewClient(&redis.Options{
 		Addr:     "43.143.44.118:9898", // Redis 服务器地址和端口
 		Password: "192047",             // Redis 服务器密码，如果没有设置密码则为空字符串
