@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="Default Changelist">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33a485d7-a516-4090-873f-8bc25d92bd30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/33a485d7-a516-4090-873f-8bc25d92bd30.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-service/handler/messageHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/handler/messageHandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-service/proto/socialFunction.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/proto/socialFunction.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-service/proto/socialFunction.proto" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/proto/socialFunction.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-service/router/messageRoute.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/router/messageRoute.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-service/router/relationRoute.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/router/relationRoute.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-service/service/messageService.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/service/messageService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-service/service/relationService.go" beforeDir="false" afterPath="$PROJECT_DIR$/social-service/service/relationService.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,31 +57,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/aaaaaaSpace/Go/goTikTok/social-service/dal/db",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/aaaaaaSpace/Go/goTikTok/social-service/dal/db&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
-      "protobuf"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
+      &quot;protobuf&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\dal\db" />
@@ -104,7 +97,7 @@
       <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build main.go (1)">
+  <component name="RunManager" selected="Go 构建.go build douyin/base-service">
     <configuration name="go build douyin/base-service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
       <working_directory value="$PROJECT_DIR$/base-service" />
@@ -146,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 构建.go build douyin/base-service" />
         <item itemvalue="Go 构建.go build main.go (1)" />
         <item itemvalue="Go 构建.go build main.go" />
-        <item itemvalue="Go 构建.go build douyin/base-service" />
         <item itemvalue="Go 构建.go build user.go" />
         <item itemvalue="Go 构建.go build douyin/douyin-api" />
       </list>
