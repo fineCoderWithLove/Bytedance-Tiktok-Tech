@@ -1,0 +1,70 @@
+syntax = "proto3";
+//import "protobuf/src/google/protobuf/descriptor.proto";
+//import "google/protobuf/timestamp.proto";
+package vp;
+option go_package = "./";
+
+service VideoService {
+    rpc VideoPublish (PublishReq) returns (PublishResp); //用户发布视频的接口
+    rpc VideoList (VideoListReq) returns (VideoListResp); //用户所有投稿的视频
+    rpc VideoStream (VideoStreamReq) returns (VideoStreamResp); //视频流接口实际上就是分页查询视频但是是分页查询的条件就是时间
+}
+//发布视频请求
+message PublishReq {
+    string token = 1;
+    string title = 2;
+    bytes data = 3;
+}
+//发布视频的响应
+message PublishResp {
+    string statusCode = 1;
+    string statusMessage = 2;
+}
+
+//个人视频列表的请求
+message VideoListReq {
+    string token = 1; //用户鉴权
+    string user_id = 2; // 用户唯一标识
+}
+//个人视频列表的响应
+message VideoListResp {
+    int32 status_code = 1; // 状态码，0-成功，其他值-失败
+    string status_msg = 2; // 返回状态描述
+    repeated  Video video_list = 3; // 用户发布的视频列表
+}
+message Video {
+    int64 id = 1; // 视频唯一标识
+    User author = 2; // 视频作者信息
+    string play_url = 3; // 视频播放地址
+    string cover_url = 4; // 视频封面地址
+    int64 favorite_count = 5; // 视频的点赞总数
+    int64 comment_count = 6; // 视频的评论总数
+    bool is_favorite = 7; // true-已点赞，false-未点赞
+    string title = 8; // 视频标题
+}
+message User {
+    int64 id = 1; // 用户id
+    string name = 2; // 用户名称
+    int64 follow_count = 3; // 关注总数
+    int64 follower_count = 4; // 粉丝总数
+    bool is_follow = 5; // true-已关注，false-未关注
+    string avatar = 6; //用户头像
+    string background_image = 7; //用户个人页顶部大图
+    string signature = 8; //个人简介
+    int64 total_favorited = 9; //获赞数量
+    int64 work_count = 10; //作品数量
+    int64 favorite_count = 11; //点赞数量
+}
+
+//视频流的请求
+message VideoStreamReq {
+    int64 latest_time = 1; // 可选参数，限制返回视频的最新投稿时间戳，精确到秒，不填表示当前时间
+    string token = 2; // 可选参数，登录用户设置
+}
+//视频流的返回
+message VideoStreamResp {
+    int32 status_code = 1; // 状态码，0-成功，其他值-失败
+    string status_msg = 2; // 返回状态描述
+    repeated  Video video_list = 3; // 视频列表
+    int64 next_time = 4; // 本次返回的视频中，发布最早的时间，作为下次请求时的latest_time
+}
