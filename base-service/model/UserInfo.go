@@ -25,7 +25,11 @@ type User struct {
 	Password        string
 }
 
+<<<<<<< HEAD
 //注册时候返回的数据
+=======
+// 注册时候返回的数据
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 type UserResp struct {
 	StatusCode int64  `json:"status_code"` // 状态码，0-成功，其他值-失败
 	StatusMsg  string `json:"status_msg"`  // 返回状态描述

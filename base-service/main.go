@@ -3,6 +3,7 @@ package main
 import (
 	"douyin/base-service/handler"
 	pb "douyin/base-service/proto"
+
 	"flag"
 	"fmt"
 	"net"
@@ -20,6 +21,7 @@ func main() {
 	server := grpc.NewServer()
 	//pb.RegisterUserServer(server,&handler.UserServe{})
 	pb.RegisterUserServiceServer(server, &handler.UserServe{})
+	vpb.RegisterVideoServiceServer(server, &handler.VideoServe{})
 	lis, err := net.Listen("tcp", fmt.Sprintf("%s:%d", *IP, *Port))
 	if err != nil {
 		panic("faild to liston " + err.Error())
@@ -30,3 +32,4 @@ func main() {
 	}
 
 }
+

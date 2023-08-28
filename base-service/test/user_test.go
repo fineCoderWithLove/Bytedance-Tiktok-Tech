@@ -47,9 +47,15 @@ func TestRegisterUser(t *testing.T) {
 
 				// 设置 JWT 的声明（Payload）
 				claims := token.Claims.(jwt.MapClaims)
+<<<<<<< HEAD
 				claims["sub"] = user.Id         // 主题
 				claims["name"] = username          // 名称
 				claims["iat"] = time.Now().Unix()    // 签发时间
+=======
+				claims["sub"] = user.Id                               // 主题
+				claims["name"] = username                             // 名称
+				claims["iat"] = time.Now().Unix()                     // 签发时间
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 				claims["exp"] = time.Now().Add(time.Hour * 24).Unix() // 过期时间
 
 				// 设置密钥
@@ -83,14 +89,22 @@ func TestLogin(t *testing.T) {
 	username := "郑梓桐"
 	oldpassword := "20021211zzt"
 	var user model.User
+<<<<<<< HEAD
 	result := global.DB.Table("user").Where("name = ?",username).First(&user)
+=======
+	result := global.DB.Table("user").Where("name = ?", username).First(&user)
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 	if result.Error != nil {
 		// 处理查询错误
 		fmt.Println("something wrong")
 	}
 	fmt.Println(user.Password)
 	options := &password.Options{16, 100, 32, sha512.New}
+<<<<<<< HEAD
 	passwordInfo := strings.Split(user.Password,"$")
+=======
+	passwordInfo := strings.Split(user.Password, "$")
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 	fmt.Println(passwordInfo)
 	check := password.Verify(oldpassword, passwordInfo[2], passwordInfo[3], options)
 	fmt.Println(check) // true
@@ -102,9 +116,15 @@ func TestLogin(t *testing.T) {
 
 		// 设置 JWT 的声明（Payload）
 		claims := token.Claims.(jwt.MapClaims)
+<<<<<<< HEAD
 		claims["sub"] = user.Id         // 主题
 		claims["name"] = username          // 名称
 		claims["iat"] = time.Now().Unix()    // 签发时间
+=======
+		claims["sub"] = user.Id                               // 主题
+		claims["name"] = username                             // 名称
+		claims["iat"] = time.Now().Unix()                     // 签发时间
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 		claims["exp"] = time.Now().Add(time.Hour * 24).Unix() // 过期时间
 
 		// 设置密钥
@@ -128,6 +148,7 @@ func TestLogin(t *testing.T) {
 	}
 
 }
+<<<<<<< HEAD
 /*
 	查询用户的详情信息
  */
@@ -139,3 +160,16 @@ func TestSelectUserDetail(t *testing.T) {
 
 
 }
+=======
+
+/*
+	查询用户的详情信息
+*/
+func TestSelectUserDetail(t *testing.T) {
+	userId := 7
+	var user model.User
+	global.DB.Table("user").Where("id = ?", userId).First(&user)
+	fmt.Println(user)
+
+}
+>>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
