@@ -5,11 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d75daf60-821e-4b45-a28d-94720ac73ea8" name="Default Changelist" comment="Default Changelist">
+      <change afterPath="$PROJECT_DIR$/douyin-api/social-service/dal/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douyin-api/social-service/dal/config/database.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douyin-api/social-service/dal/config/database.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douyin-api/social-service/handler/relationHandler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/douyin-api/social-service/router/InitRoutes.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/33a485d7-a516-4090-873f-8bc25d92bd30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/33a485d7-a516-4090-873f-8bc25d92bd30.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/global/global.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/model/UserInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/model/UserInfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/api/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/api/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/globalinit/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/globalinit/logger.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/globalinit/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/globalinit/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/douyin-api/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/router/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interaction-service/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/interaction-service/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interaction-service/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/interaction-service/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/dal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/dal/config/database.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/dal/config/database.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/dal/db/messageRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/dal/db/messageRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/dal/db/relationRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/dal/db/relationRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/dal/db/userRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/dal/db/userRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/handler/followHandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/handler/messageHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/handler/messageHandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/handler/relationHandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/middleware/AuthMiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/middleware/AuthMiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/middleware/CORSMiddleware.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/proto/socialFunction.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/proto/socialFunction.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/proto/socialFunction.proto" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/proto/socialFunction.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/router/InitRoutes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/router/followRoute.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/router/messageRoute.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/router/relationRoute.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/service/followService.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/service/messageService.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/service/messageService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/service/relationService.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/service/relationService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/utils/download.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/utils/download.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/utils/jwt/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/douyin-api/social-service/utils/jwt/jwt.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +110,7 @@
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/aaaaaaSpace/Go/goTikTok/social-service/dal/db&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/28442&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -84,66 +126,103 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\utils" />
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service" />
       <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\dal\db" />
       <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\dal" />
       <recent name="D:\aaaaaaSpace\Go\goTikTok\base-service\proto" />
-      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api\globalinit" />
-      <recent name="D:\Go_WorkSpace\src\douyin\base-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\douyin-api" />
+      <recent name="D:\aaaaaaSpace\Go\goTikTok" />
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\router" />
+      <recent name="D:\aaaaaaSpace\Go\goTikTok\douyin-api\router" />
       <recent name="D:\aaaaaaSpace\Go\goTikTok\social-service\utils" />
-      <recent name="D:\aaaaaaSpace\Go\goTikTok\base-service" />
-      <recent name="D:\Go_WorkSpace\src\douyin\douyin-api" />
-      <recent name="D:\Go_WorkSpace\src\douyin\base-service\router" />
     </key>
   </component>
   <component name="RunManager" selected="Go 构建.go build douyin/base-service">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="demodemo" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build douyin/base-service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
       <working_directory value="$PROJECT_DIR$/base-service" />
       <kind value="PACKAGE" />
       <package value="douyin/base-service" />
-      <filePath value="$PROJECT_DIR$/base-service/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build douyin/douyin-api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/douyin-api" />
-      <kind value="PACKAGE" />
-      <package value="douyin/douyin-api" />
-      <filePath value="$PROJECT_DIR$/douyin-api/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/base-service" />
-      <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/base-service/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="douyin" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
+      <kind value="DIRECTORY" />
+      <package value="demodemo" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/social-service/test/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="go build user.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="demodemo/social-service/router 中的 TestInitMessageRoute" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="douyin" />
-      <working_directory value="$PROJECT_DIR$/douyin-api" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/douyin-api/api/user.go" />
+      <working_directory value="$PROJECT_DIR$/social-service/router" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="demodemo/social-service/router" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestInitMessageRoute\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demodemo/social-service/router 中的 TestInitRelationRoute" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/social-service/router" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="demodemo/social-service/router" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestInitRelationRoute\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="douyin/douyin-api/globalinit 中的 TestRouters" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/douyin-api/globalinit" />
+      <root_directory value="$PROJECT_DIR$/douyin-api" />
+      <kind value="PACKAGE" />
+      <package value="douyin/douyin-api/globalinit" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRouters\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test demodemo/social-service/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="douyin" />
+      <working_directory value="$PROJECT_DIR$/social-service/service" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="demodemo/social-service/service" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go 构建.go build douyin/base-service" />
-        <item itemvalue="Go 构建.go build main.go (1)" />
-        <item itemvalue="Go 构建.go build main.go" />
-        <item itemvalue="Go 构建.go build user.go" />
-        <item itemvalue="Go 构建.go build douyin/douyin-api" />
+        <item itemvalue="Go 测试.douyin/douyin-api/globalinit 中的 TestRouters" />
+        <item itemvalue="Go 测试.go test demodemo/social-service/service" />
+        <item itemvalue="Go 测试.demodemo/social-service/router 中的 TestInitRelationRoute" />
+        <item itemvalue="Go 测试.demodemo/social-service/router 中的 TestInitMessageRoute" />
       </list>
     </recent_temporary>
   </component>

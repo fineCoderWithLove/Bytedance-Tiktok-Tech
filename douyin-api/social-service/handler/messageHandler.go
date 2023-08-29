@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"douyin/social-service/proto"
-	"douyin/social-service/service"
+	"douyin/douyin-api/social-service/proto"
+	"douyin/douyin-api/social-service/service"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"

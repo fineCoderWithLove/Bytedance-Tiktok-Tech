@@ -20,11 +20,7 @@ import (
 	"github.com/anaskhan96/go-password-encoder"
 )
 
-<<<<<<< HEAD
-//定义md5加密
-=======
 // 定义md5加密
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 func genMd5(code string) string {
 	Md5 := md5.New()
 	_, _ = io.WriteString(Md5, code)
@@ -51,11 +47,7 @@ func EncodingPassword(oldpassword string) string {
 }
 
 /*
-<<<<<<< HEAD
-	1.实现用户注册的接口
-=======
 1.实现用户注册的接口
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 */
 func (s *UserServe) UserRegister(ctx context.Context, req *pb.RegisterReq) (*pb.RegisterOrLoginInfoResp, error) {
 	//取出信息
@@ -90,17 +82,10 @@ func (s *UserServe) UserRegister(ctx context.Context, req *pb.RegisterReq) (*pb.
 
 				// 设置 JWT 的声明（Payload）
 				claims := token.Claims.(jwt.MapClaims)
-<<<<<<< HEAD
-				claims["sub"] = user.Id                               // 主题
-				claims["name"] = username                             // 名称
-				claims["iat"] = time.Now().Unix()                     // 签发时间
-				claims["exp"] = time.Now().Add(time.Hour * 24*30).Unix() // 过期时间
-=======
 				claims["sub"] = user.Id                                    // 主题
 				claims["name"] = username                                  // 名称
 				claims["iat"] = time.Now().Unix()                          // 签发时间
 				claims["exp"] = time.Now().Add(time.Hour * 24 * 30).Unix() // 过期时间
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 
 				// 设置密钥
 				// 注意：在生产环境中，请使用更安全的方法存储和管理密钥
@@ -138,19 +123,11 @@ func (s *UserServe) UserRegister(ctx context.Context, req *pb.RegisterReq) (*pb.
 		return resp, nil
 	}
 
-<<<<<<< HEAD
-	return nil,nil
-}
-
-/*
-	2.实现用户登录的接口
-=======
 	return nil, nil
 }
 
 /*
 2.实现用户登录的接口
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 */
 func (s *UserServe) UserLogin(ctx context.Context, req *pb.LoginReq) (*pb.RegisterOrLoginInfoResp, error) {
 	/*
@@ -161,11 +138,8 @@ func (s *UserServe) UserLogin(ctx context.Context, req *pb.LoginReq) (*pb.Regist
 	username := req.Username
 	oldpassword := req.Password
 	var user model.User
-<<<<<<< HEAD
-=======
 	fmt.Println("用户姓名")
 	fmt.Println(username)
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 
 	result := global.DB.Table("user").Where("name = ?", username).First(&user)
 	if result.Error != nil {
@@ -211,21 +185,13 @@ func (s *UserServe) UserLogin(ctx context.Context, req *pb.LoginReq) (*pb.Regist
 		// 输出生成的 JWT
 		fmt.Println("Generated JWT:", tokenString)
 		//存入redis中
-<<<<<<< HEAD
-		err = global.RS.Set(strconv.Itoa(int(user.Id)), tokenString, 0).Err()
-=======
 		err = global.RS.Set(tokenString, strconv.Itoa(int(user.Id)), 0).Err()
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 		if err != nil {
 			fmt.Println("Failed to set key:", err)
 		}
 		zap.S().Info("登录成功")
 		resp := &pb.RegisterOrLoginInfoResp{
-<<<<<<< HEAD
-			StatusCode: 200,
-=======
 			StatusCode: 0,
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 			StatusMsg:  "登录成功",
 			UserId:     user.Id,
 			Token:      tokenString,
@@ -245,19 +211,11 @@ func (s *UserServe) UserLogin(ctx context.Context, req *pb.LoginReq) (*pb.Regist
 }
 
 /*
-<<<<<<< HEAD
-	3.实现查询用户详情的接口
-*/
-func (s *UserServe) UserDetail(ctx context.Context, req *pb.DetailRep) (*pb.UserDetailResp, error) {
-	//需要有token才能查询
-	zap.S().Info("进入了【UserDetail】")
-=======
 3.实现查询用户详情的接口
 */
 func (s *UserServe) UserDetail(ctx context.Context, req *pb.DetailRep) (*pb.UserDetailResp, error) {
 	//需要有token才能查询
 	fmt.Println("进入了UserDetail")
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 	if req.Token != "" {
 		userId := req.UserId
 		fmt.Println(userId)
@@ -270,16 +228,6 @@ func (s *UserServe) UserDetail(ctx context.Context, req *pb.DetailRep) (*pb.User
 				StatusMsg:  "您尚未注册",
 				User:       nil,
 			}
-<<<<<<< HEAD
-			return resp,nil
-		}else {
-			pbUser := &pb.User{
-				Id:              user.Id,
-				Name:            user.Name,
-				FollowCount:     user.FollowCount,
-				FollowerCount:   user.FollowerCount,
-				//需要另外进行查询
-=======
 			return resp, nil
 		} else {
 			pbUser := &pb.User{
@@ -288,7 +236,6 @@ func (s *UserServe) UserDetail(ctx context.Context, req *pb.DetailRep) (*pb.User
 				FollowCount:   user.FollowCount,
 				FollowerCount: user.FollowerCount,
 				//TODO 需要另外进行查询
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 				IsFollow:        false,
 				Avatar:          user.Avatar,
 				BackgroundImage: user.BackgroundImage,
@@ -298,16 +245,6 @@ func (s *UserServe) UserDetail(ctx context.Context, req *pb.DetailRep) (*pb.User
 				FavoriteCount:   user.FavoriteCount,
 			}
 			resp := &pb.UserDetailResp{
-<<<<<<< HEAD
-				StatusCode: 200,
-				StatusMsg:  "成功",
-				User:       pbUser,
-			}
-			return resp,nil
-		}
-
-	}else {
-=======
 				StatusCode: 0,
 				StatusMsg:  "成功",
 				User:       pbUser,
@@ -316,16 +253,11 @@ func (s *UserServe) UserDetail(ctx context.Context, req *pb.DetailRep) (*pb.User
 		}
 
 	} else {
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 		resp := &pb.UserDetailResp{
 			StatusCode: 500,
 			StatusMsg:  "登录已经过期,请重试",
 			User:       nil,
 		}
-<<<<<<< HEAD
-		return resp,nil
-=======
 		return resp, nil
->>>>>>> cba9c25843da297a4159b839c47e609847fe7bed
 	}
 }

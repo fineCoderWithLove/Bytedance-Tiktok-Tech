@@ -55,23 +55,3 @@ func ParseToken(tokenString string) (*MyClaims, error) {
 	}
 	return nil, errors.New("invalid token")
 }
-
-// RefreshToken 刷新AccessToken
-func RefreshToken(aToken, rToken string) (newAToken, newRToken string, err error) {
-	// refresh token无效直接返回
-	if _, err = jwt.Parse(rToken, keyFunc); err != nil {
-		return
-	}
-
-	// 从旧access token中解析出claims数据
-	var claims MyClaims
-	_, err = jwt.ParseWithClaims(aToken, &claims, keyFunc)
-	v, _ := err.(*jwt.ValidationError)
-
-	// 当access token是过期错误 并且 refresh token没有过期时就创建一个新的access token
-	if v.Errors == jwt.ValidationErrorExpired {
-		token, _ := GenToken(claims.UserID)
-		return token, "", nil
-	}
-	return
-}

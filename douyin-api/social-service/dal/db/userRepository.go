@@ -1,8 +1,8 @@
 package db
 
 import (
-	"douyin/social-service/dal/config"
-	"douyin/social-service/proto"
+	"douyin/douyin-api/global"
+	"douyin/douyin-api/social-service/proto"
 	"github.com/jinzhu/gorm"
 )
 
@@ -24,7 +24,7 @@ type UserRepository struct {
 }
 
 func (ur UserRepository) UpdateWorkCount(userId int64, isAdd bool) {
-	db := config.DB.Table("tb_user").Where("user_id = ?", userId)
+	db := global.DB.Table("tb_user").Where("user_id = ?", userId)
 
 	if isAdd {
 		db.UpdateColumn("work_count", gorm.Expr("work_count + ?", 1))
@@ -33,7 +33,7 @@ func (ur UserRepository) UpdateWorkCount(userId int64, isAdd bool) {
 }
 
 func (ur UserRepository) UpdateFollowCount(userId int64, isAdd bool) {
-	db := config.DB.Table("tb_user").Where("user_id = ?", userId)
+	db := global.DB.Table("tb_user").Where("user_id = ?", userId)
 
 	if isAdd {
 		db.UpdateColumn("follow_count", gorm.Expr("follow_count + ?", 1))
@@ -42,7 +42,7 @@ func (ur UserRepository) UpdateFollowCount(userId int64, isAdd bool) {
 }
 
 func (ur UserRepository) UpdateFollowerCount(userId int64, isAdd bool) {
-	db := config.DB.Table("tb_user").Where("user_id = ?", userId)
+	db := global.DB.Table("tb_user").Where("user_id = ?", userId)
 
 	if isAdd {
 		db.UpdateColumn("follower_count", gorm.Expr("follower_count + ?", 1))
@@ -51,7 +51,7 @@ func (ur UserRepository) UpdateFollowerCount(userId int64, isAdd bool) {
 }
 
 func (ur UserRepository) UpdateFavoriteCount(userId int64, isAdd bool) {
-	db := config.DB.Table("tb_user").Where("user_id = ?", userId)
+	db := global.DB.Table("tb_user").Where("user_id = ?", userId)
 
 	if isAdd {
 		db.UpdateColumn("favorite_count", gorm.Expr("favorite_count + ?", 1))
@@ -61,7 +61,7 @@ func (ur UserRepository) UpdateFavoriteCount(userId int64, isAdd bool) {
 
 // todo total_favorited 在数据库中存储的是 varchar 考虑改成 BigInt 在返回的时候转化为 string
 func (ur UserRepository) UpdateTotalFavoritedCount(userId int64, isAdd bool) {
-	db := config.DB.Table("tb_user").Where("user_id = ?", userId)
+	db := global.DB.Table("tb_user").Where("user_id = ?", userId)
 
 	if isAdd {
 		db.UpdateColumn("total_favorited", gorm.Expr("total_favorited + ?", 1))
@@ -71,21 +71,21 @@ func (ur UserRepository) UpdateTotalFavoritedCount(userId int64, isAdd bool) {
 
 func (ur UserRepository) QueryUserIdByUserName(name string) (int64, error) {
 	var user proto.User
-	config.DB.Table("tb_user").Select("user_id").Where("username = ?", name).Scan(&user)
+	global.DB.Table("tb_user").Select("user_id").Where("username = ?", name).Scan(&user)
 	return user.UserId, nil
 }
 
 // CheckUser 检查用户是否存在
 func (ur UserRepository) CheckUser(userName string, password string) (proto.User, error) {
 	var user proto.User
-	err := config.DB.Table("tb_user").Where("username = ? and password = ?", userName, password).Scan(&user).Error
+	err := global.DB.Table("tb_user").Where("username = ? and password = ?", userName, password).Scan(&user).Error
 	return user, err
 }
 
 // GetUserById 获取单个用户
 func (ur UserRepository) GetUserById(id int64) (proto.User, error) {
 	var user proto.User
-	err := config.DB.Where("user_id = ?", id).First(&user).Error
+	err := global.DB.Where("user_id = ?", id).First(&user).Error
 	return user, err
 }
 
@@ -98,7 +98,7 @@ func (ur UserRepository) CreateUser(userName string, password string) (proto.Use
 	user.Avatar = "D:/aaaaaaSpace/Go/goTikTok/social-service/utils/download.jpg"
 	user.UserName = userName
 	user.Password = password
-	err := config.DB.Table("tb_user").Create(&user).Error
+	err := global.DB.Table("tb_user").Create(&user).Error
 	return user, err
 }
 

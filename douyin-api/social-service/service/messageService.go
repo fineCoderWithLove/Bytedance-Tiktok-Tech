@@ -1,27 +1,27 @@
 package service
 
 import (
-	"douyin/social-service/dal/db"
-	"douyin/social-service/proto"
+	"douyin/douyin-api/social-service/dal/db"
+	"douyin/douyin-api/social-service/proto"
 	"log"
 	"strconv"
 )
 
 type IChatService interface {
-	PostMessage(request proto.SocialMessageChatRequest, userId int64) proto.SocialMessageChatResponse
-	ListMessage(messageRequest proto.SocialMessageHistoryRequest, userId int64) proto.SocialMessageHistoryResponse
+	PostMessage(SocialMessageChatRequest proto.SocialMessageChatRequest, userId int64) proto.SocialMessageChatResponse
+	ListMessage(SocialMessageHistoryRequest proto.SocialMessageHistoryRequest, userId int64) proto.SocialMessageHistoryResponse
 }
 
 type ChatService struct {
 	ChatRepository db.IChatRepository
 }
 
-func (c ChatService) ListMessage(messageRequest proto.SocialMessageHistoryRequest, userId int64) proto.SocialMessageHistoryResponse {
+func (c ChatService) ListMessage(SocialMessageHistoryRequest proto.SocialMessageHistoryRequest, userId int64) proto.SocialMessageHistoryResponse {
 
 	//toUserID, _ := strconv.ParseInt(messageRequest.ToUserID, 10, 64)
-	toUserID := messageRequest.ToUserId
+	toUserID := SocialMessageHistoryRequest.ToUserId
 
-	messages, err := c.ChatRepository.ListMessage(userId, toUserID, messageRequest.PreMsgTime)
+	messages, err := c.ChatRepository.ListMessage(userId, toUserID, SocialMessageHistoryRequest.PreMsgTime)
 	if err != nil {
 		log.Printf("ListMessage|查询消息列表失败|%v", err)
 		return proto.SocialMessageHistoryResponse{
@@ -52,11 +52,11 @@ func (c ChatService) ListMessage(messageRequest proto.SocialMessageHistoryReques
 		}}
 }
 
-func (c ChatService) PostMessage(request proto.SocialMessageChatRequest, userId int64) proto.SocialMessageChatResponse {
+func (c ChatService) PostMessage(SocialMessageChatRequest proto.SocialMessageChatRequest, userId int64) proto.SocialMessageChatResponse {
 
-	content := request.Content
-	toUserId := request.ToUserId
-	actionType := request.ActionType
+	content := SocialMessageChatRequest.Content
+	toUserId := SocialMessageChatRequest.ToUserId
+	actionType := SocialMessageChatRequest.ActionType
 
 	err := c.ChatRepository.AddMessage(userId, strconv.FormatInt(toUserId, 10), content, string(actionType))
 

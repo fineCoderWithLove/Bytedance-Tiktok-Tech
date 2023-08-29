@@ -1,8 +1,8 @@
 package db
 
 import (
-	"douyin/social-service/dal/config"
-	"douyin/social-service/proto"
+	"douyin/douyin-api/global"
+	"douyin/douyin-api/social-service/proto"
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"strconv"
 	"time"
@@ -21,7 +21,7 @@ func (c ChatRepository) ListMessage(userId int64, toUserID int64, preMsgTime int
 	var messages []proto.Message
 	timeObj := time.Unix(preMsgTime, 0)
 	formattedTime := timeObj.Format("2002-11-02 11:01:12")
-	err := config.DB.Table("tb_message").Where("user_id = ? and to_user_id = ? and create_time > ? ", userId, toUserID, formattedTime).Or("user_id = ? and to_user_id = ? and create_time > ?", toUserID, userId, formattedTime).Order("create_time").Find(&messages).Error
+	err := global.DB.Table("message").Where("user_id = ? and to_user_id = ? and create_time > ? ", userId, toUserID, formattedTime).Or("user_id = ? and to_user_id = ? and create_time > ?", toUserID, userId, formattedTime).Order("create_time").Find(&messages).Error
 	return messages, err
 }
 
@@ -38,7 +38,7 @@ func (c ChatRepository) AddMessage(userId int64, toUserId string, content string
 	message.CreateTime = timestamppb.New(currentTime)
 	message.UpdateTime = timestamppb.New(currentTime)
 
-	err := config.DB.Table("tb_message").Create(&message).Error
+	err := global.DB.Table("message").Create(&message).Error
 	return err
 }
 

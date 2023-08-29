@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"douyin/social-service/proto"
-	"douyin/social-service/utils/jwt"
+	"douyin/douyin-api/social-service/proto"
+	"douyin/douyin-api/social-service/utils/jwt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"

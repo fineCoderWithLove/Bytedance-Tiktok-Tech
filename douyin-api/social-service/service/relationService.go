@@ -1,9 +1,10 @@
 package service
 
 import (
-	"douyin/social-service/dal/config"
-	"douyin/social-service/dal/db"
-	"douyin/social-service/proto"
+	"douyin/douyin-api/global"
+	"douyin/douyin-api/social-service/dal/db"
+
+	"douyin/douyin-api/social-service/proto"
 	"github.com/jinzhu/copier"
 	"log"
 	"strconv"
@@ -23,8 +24,8 @@ type RelationService struct {
 }
 
 // GetFollower 获取粉丝
-func (r RelationService) GetFollower(followerRequest proto.SocialRelationFollowerListRequest) proto.SocialRelationFollowerListResponse {
-	userId, err := strconv.ParseInt(strconv.FormatInt(followerRequest.UserId, 10), 10, 64)
+func (r RelationService) GetFollower(SocialRelationFollowerListRequest proto.SocialRelationFollowerListRequest) proto.SocialRelationFollowerListResponse {
+	userId, err := strconv.ParseInt(strconv.FormatInt(SocialRelationFollowerListRequest.UserId, 10), 10, 64)
 	if err != nil {
 		log.Printf("GetFollow|格式转换失败|%v", err)
 		return proto.SocialRelationFollowerListResponse{}
@@ -36,7 +37,7 @@ func (r RelationService) GetFollower(followerRequest proto.SocialRelationFollowe
 		return proto.SocialRelationFollowerListResponse{}
 	}
 
-	var followerResponse proto.SocialRelationFollowerListResponse
+	var SocialRelationFollowerListResponse proto.SocialRelationFollowerListResponse
 	for _, relation := range relations {
 		toUserId := relation.UserId
 		user, err := r.UserRepository.GetUserById(toUserId)
@@ -51,20 +52,20 @@ func (r RelationService) GetFollower(followerRequest proto.SocialRelationFollowe
 		follow := r.RelationRepository.CheckIsFollow(userId, toUserId)
 		responseUser.IsFollow = follow
 		myUser := &responseUser
-		followerResponse.UserList = append(followerResponse.UserList, myUser)
+		SocialRelationFollowerListResponse.UserList = append(SocialRelationFollowerListResponse.UserList, myUser)
 	}
 
-	followerResponse.Response = proto.Response{
+	SocialRelationFollowerListResponse.Response = proto.Response{
 		StatusCode: 0,
 		StatusMsg:  "success",
 	}
 
-	return followerResponse
+	return SocialRelationFollowerListResponse
 }
 
 // GetFollow 获取关注者
-func (r RelationService) GetFollow(followerRequest proto.SocialRelationFollowListRequest) proto.SocialRelationFollowListResponse {
-	userId, err := strconv.ParseInt(strconv.FormatInt(followerRequest.UserId, 10), 10, 64)
+func (r RelationService) GetFollow(SocialRelationFollowListRequest proto.SocialRelationFollowListRequest) proto.SocialRelationFollowListResponse {
+	userId, err := strconv.ParseInt(strconv.FormatInt(SocialRelationFollowListRequest.UserId, 10), 10, 64)
 	if err != nil {
 		log.Printf("GetFollow|格式转换失败|%v", err)
 		return proto.SocialRelationFollowListResponse{}
@@ -76,7 +77,7 @@ func (r RelationService) GetFollow(followerRequest proto.SocialRelationFollowLis
 		return proto.SocialRelationFollowListResponse{}
 	}
 
-	var followerResponse proto.SocialRelationFollowListResponse
+	var SocialRelationFollowListResponse proto.SocialRelationFollowListResponse
 	for _, relation := range relations {
 		toUserId := relation.ToUserId
 		user, err := r.UserRepository.GetUserById(toUserId)
@@ -89,28 +90,29 @@ func (r RelationService) GetFollow(followerRequest proto.SocialRelationFollowLis
 		responseUser.TotalFavorited = user.TotalFavorited
 		responseUser.IsFollow = r.RelationRepository.CheckIsFollow(userId, toUserId)
 		myUser := &responseUser
-		followerResponse.UserList = append(followerResponse.UserList, myUser)
+		SocialRelationFollowListResponse.UserList = append(SocialRelationFollowListResponse.UserList, myUser)
+
 	}
 
-	followerResponse.Response = proto.Response{
+	SocialRelationFollowListResponse.Response = proto.Response{
 		StatusCode: 0,
 		StatusMsg:  "success",
 	}
 
-	return followerResponse
+	return SocialRelationFollowListResponse
 }
 
 // FollowAction 关注操作
-func (r RelationService) FollowAction(userId int64, followActionRequest proto.SocialRelationActionRequest) proto.SocialRelationActionResponse {
-	toUserId, err := strconv.ParseInt(strconv.FormatInt(followActionRequest.ToUserId, 10), 10, 64)
+func (r RelationService) FollowAction(userId int64, SocialRelationActionRequest proto.SocialRelationActionRequest) proto.SocialRelationActionResponse {
+	toUserId, err := strconv.ParseInt(strconv.FormatInt(SocialRelationActionRequest.ToUserId, 10), 10, 64)
 	if err != nil {
 		log.Printf("FollowAction|格式转换失败|%v", err)
 		return proto.SocialRelationActionResponse{}
 	}
 
-	begin := config.DB.Begin()
+	begin := global.DB.Begin()
 	// 关注
-	if followActionRequest.ActionType == 1 {
+	if SocialRelationActionRequest.ActionType == 1 {
 		err = r.RelationRepository.AddFollow(userId, toUserId)
 		if err != nil {
 			log.Printf("FollowAction|插入数据错误|%v", err)
@@ -128,7 +130,7 @@ func (r RelationService) FollowAction(userId int64, followActionRequest proto.So
 	}
 
 	// 取消关注
-	if followActionRequest.ActionType == 2 {
+	if SocialRelationActionRequest.ActionType == 2 {
 		err = r.RelationRepository.RemoveFollow(userId, toUserId)
 		if err != nil {
 			log.Printf("FollowAction|删除数据错误|%v", err)
@@ -153,8 +155,8 @@ func (r RelationService) FollowAction(userId int64, followActionRequest proto.So
 }
 
 // GetFriendList 获取朋友列表
-func (r RelationService) GetFriendList(userId int64, getFriendListRequest proto.SocialRelationFriendListRequest) proto.SocialRelationFriendListResponse {
-	userId, err := strconv.ParseInt(strconv.FormatInt(getFriendListRequest.UserId, 10), 10, 64)
+func (r RelationService) GetFriendList(userId int64, SocialRelationFriendListRequest proto.SocialRelationFriendListRequest) proto.SocialRelationFriendListResponse {
+	userId, err := strconv.ParseInt(strconv.FormatInt(SocialRelationFriendListRequest.UserId, 10), 10, 64)
 	if err != nil {
 		log.Printf("GetFollow|格式转换失败|%v", err)
 		return proto.SocialRelationFriendListResponse{}
@@ -167,7 +169,7 @@ func (r RelationService) GetFriendList(userId int64, getFriendListRequest proto.
 		return proto.SocialRelationFriendListResponse{}
 	}
 
-	var getFriendListResponse proto.SocialRelationFriendListResponse
+	var SocialRelationFriendListResponse proto.SocialRelationFriendListResponse
 	for _, relation := range relations {
 		userId := relation.UserId
 		user, err := r.UserRepository.GetUserById(userId)
@@ -179,15 +181,15 @@ func (r RelationService) GetFriendList(userId int64, getFriendListRequest proto.
 		_ = copier.Copy(&responseUser, &user)
 
 		myUser := &responseUser
-		getFriendListResponse.UserList = append(getFriendListResponse.UserList, myUser)
+		SocialRelationFriendListResponse.UserList = append(SocialRelationFriendListResponse.UserList, myUser)
 	}
 
-	getFriendListResponse.Response = proto.Response{
+	SocialRelationFriendListResponse.Response = proto.Response{
 		StatusCode: 0,
 		StatusMsg:  "success",
 	}
 
-	return getFriendListResponse
+	return SocialRelationFriendListResponse
 
 }
 func NewRelationService() IRelationService {

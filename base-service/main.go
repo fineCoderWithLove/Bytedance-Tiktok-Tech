@@ -3,6 +3,7 @@ package main
 import (
 	"douyin/base-service/handler"
 	pb "douyin/base-service/proto"
+	vpb "douyin/base-service/videoproto"
 
 	"flag"
 	"fmt"
@@ -32,4 +33,3 @@ func main() {
 	}
 
 }
-
