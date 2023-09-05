@@ -23,6 +23,8 @@
 ![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/aaee18fe-bfb1-4216-9bdb-a3033c74c116)
   ### 2.3代码目录介绍
   ![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/98c481dd-b922-4c96-bf62-926947ce3282)
+
+  接口文档地址: https://apifox.com/apidoc/shared-09d88f32-0b6c-4157-9d07-a36d32d7a75c/api-50717106
   ## 三、测试结果
   ### 3.1功能测试
   | 功能项      | 接口名称 | 测试点 | 模块 | 结果 |
