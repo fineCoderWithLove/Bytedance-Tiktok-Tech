@@ -1,0 +1,83 @@
+syntax = "proto3";
+package rpb;
+option go_package = "./";
+
+service UserService {
+    rpc UserRelationAction (UserRelationActionReq) returns (UserRelationActionResp); //用户注册的信息
+    rpc UserRelationFollowList (UserRelationFollowListReq) returns (UserRelationFollowListResp); //用户注册的信息
+    rpc UserRelationFollowerList (UserRelationFollowerListReq) returns (UserRelationFollowerListResp); //用户注册的信息
+    rpc UserRelationFriendList (UserRelationFriendListReq) returns (UserRelationFriendListResp); //用户注册的信息
+}
+//first interface
+message UserRelationActionReq {
+    string token = 1; // 用户鉴权token
+    int64 to_user_id = 2; // 对方用户id
+    int32 action_type = 3; // 1-关注，2-取消关注
+}
+message UserRelationActionResp {
+    int32 status_code = 1; // 状态码，0-成功，其他值-失败
+    string status_msg = 2; // 返回状态描述
+}
+
+// Second interface
+message UserRelationFollowListReq {
+    int64 user_id = 1; // 用户id
+    string token = 2; // 用户鉴权token
+}
+
+message UserRelationFollowListResp {
+    int32 status_code = 1; // 状态码，0-成功，其他值-失败
+    string status_msg = 2; // 返回状态描述
+    repeated User user_list = 3; // 用户信息列表
+}
+
+message User {
+    int64 id = 1; // 用户id
+    string name = 2; // 用户名称
+    int64 follow_count = 3; // 关注总数
+    int64 follower_count = 4; // 粉丝总数
+    bool is_follow = 5; // true-已关注，false-未关注
+    string avatar = 6; //用户头像
+    string background_image = 7; //用户个人页顶部大图
+    string signature = 8; //个人简介
+    int64 total_favorited = 9; //获赞数量
+    int64 work_count = 10; //作品数量
+    int64 favorite_count = 11; //点赞数量
+}
+//Third interface
+message UserRelationFollowerListReq {
+    int64 user_id = 1; // 用户id
+    string token = 2; // 用户鉴权token
+}
+
+message UserRelationFollowerListResp {
+    int32 status_code = 1; // 状态码，0-成功，其他值-失败
+    string status_msg = 2; // 返回状态描述
+    repeated User user_list = 3; // 用户列表
+}
+// Four interface
+message UserRelationFriendListReq {
+    int64 user_id = 1; // 用户id
+    string token = 2; // 用户鉴权token
+}
+
+message UserRelationFriendListResp {
+    int32 status_code = 1; // 状态码，0-成功，其他值-失败
+    string status_msg = 2; // 返回状态描述
+    repeated FriendUser user_list = 3; // 用户列表
+}
+message FriendUser {
+    int64 id = 1; // 用户id
+    string name = 2; // 用户名称
+    int64 follow_count = 3; // 关注总数
+    int64 follower_count = 4; // 粉丝总数
+    bool is_follow = 5; // true-已关注，false-未关注
+    string avatar = 6; //用户头像
+    string background_image = 7; //用户个人页顶部大图
+    string signature = 8; //个人简介
+    int64 total_favorited = 9; //获赞数量
+    int64 work_count = 10; //作品数量
+    int64 favorite_count = 11; //点赞数量
+    string message = 12; // 和该好友的最新聊天消息
+    int64 msgType = 13; // message消息的类型，0 => 当前请求用户接收的消息， 1 => 当前请求用户发送的消息
+}

@@ -1,0 +1,12 @@
+{"level":"INFO","ts":"2023-09-05T10:17:39.972+0800","caller":"handler/comment.go:31","msg":"UserServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:17:39.974+0800","caller":"handler/favorite.go:31","msg":"VideoServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:17:39.975+0800","caller":"comment/comment.go:29","msg":"UserServiceClient","Addr: ":"127.0.0.1:8882"}
+{"level":"INFO","ts":"2023-09-05T10:17:46.828+0800","caller":"handler/comment.go:31","msg":"UserServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:17:46.829+0800","caller":"handler/favorite.go:31","msg":"VideoServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:17:46.830+0800","caller":"favorite/favorite.go:28","msg":"FavoriteService","Addr: ":"127.0.0.1:8881"}
+{"level":"INFO","ts":"2023-09-05T10:31:06.799+0800","caller":"handler/comment.go:31","msg":"UserServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:31:06.800+0800","caller":"handler/favorite.go:31","msg":"VideoServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:31:06.800+0800","caller":"comment/comment.go:29","msg":"UserServiceClient","Addr: ":"127.0.0.1:8882"}
+{"level":"INFO","ts":"2023-09-05T10:31:15.421+0800","caller":"handler/comment.go:31","msg":"UserServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:31:15.423+0800","caller":"handler/favorite.go:31","msg":"VideoServiceClient","Addr: ":"127.0.0.1:8887"}
+{"level":"INFO","ts":"2023-09-05T10:31:15.424+0800","caller":"favorite/favorite.go:28","msg":"FavoriteService","Addr: ":"127.0.0.1:8881"}
