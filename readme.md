@@ -20,7 +20,8 @@
 - api层负责鉴权和分发请求调用远程服务来返回数据
 - 业务层负责与数据库进行交互和逻辑处理
 
-  ![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/86df1f6c-6baf-4e6a-ba68-ef42e82a7480)
+![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/aaee18fe-bfb1-4216-9bdb-a3033c74c116)
+
 
 
   ## 三、测试结果
@@ -30,9 +31,11 @@
   2. 经过思考，我设置了互斥锁的全局变量，但是性能提升不是很明显。
   3. 经过搜索引擎查询资料，最后利用线程池技术，简单工厂设计模式设计出了一个GrpcFactory工厂，每次只需要调用工厂就可以返回连接配合利用grpc的keep-alive使得grpc的连接开销变小。性能测试图如下:
 #### 优化前
-![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/b3fc1dd3-3223-4b97-abcb-43b1f5708993)
+![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/1adacf86-77dd-4a8b-90b2-69f0fa645102)
+
 #### 优化后
-![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/f20a8ad9-57a8-4928-ab05-41036b133332)
+![image](https://github.com/fineCoderWithLove/douyin-base/assets/122780660/746d799e-bbeb-457c-9fd7-6f558e4ef482)
+
 ## 四、项目总结与反思
 ### 4.1目前存在的问题
 1. 上传视频会上传到本地的内路径中
