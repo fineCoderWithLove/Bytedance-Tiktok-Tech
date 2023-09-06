@@ -19,9 +19,9 @@ import (
 	"time"
 )
 
-var accessKey = "VWgOopLKiABRZUwFG57_AcJ-dpJm9S31S0IQqqDg"
-var secretKey = "kFfl96WyzVhY7SKCibfEIL8HktjV2fV5I3TryGeV"
-var bucket = "tiktokpro"
+var accessKey = "你的七牛accessKey"
+var secretKey = "你的七牛secretKey"
+var bucket = "你的存储仓库"
 
 type Video struct {
 	//VideoID       int64 `gorm:"primary_key;auto_increment"`
