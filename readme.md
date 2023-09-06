@@ -81,6 +81,7 @@
 - 一个项目应该敢为极致，在自己力所能及的地方做到最好，应该尝试多种可能性，寻找最好的解决办法！
 
 ## 五、部署
-1. 部署需要ffmpeg环境
+1. 安装ffmpeg环境
 2. 改变每个模块中global的mysql连接和redis连接
-3. Linux下执行命令./run.sh
+3. 改变base-service下的video中的七牛云密匙和仓库名称
+4. Linux下执行命令./run.sh
