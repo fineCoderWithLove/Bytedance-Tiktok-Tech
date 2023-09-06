@@ -1,13 +1,11 @@
 
-nohup go run base-service/cmd/main.go   &
+nohup go run app/gateway/cmd/main.go > gateway.log 2>&1 &
 
-nohup go run douyin-api/cmd/main.go  &
+nohup go run app/user/cmd/main.go > user.log 2>&1 &
 
-nohup go run interaction-service/server/comment/comment.go  &
+nohup go run app/relation/cmd/main.go > relation.log 2>&1 &
 
-nohup go run interaction-service/server/favorite/favorite.go  &
-
-nohup go run social-service/cmd/main.go  &
+nohup go run app/video/cmd/main.go > video.log 2>&1 &
 
 echo "项目已成功启动！"
 wait
