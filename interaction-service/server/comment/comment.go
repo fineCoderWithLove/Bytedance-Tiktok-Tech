@@ -3,7 +3,7 @@ package main
 import (
 	"demotest/interaction-service/dao"
 	"demotest/interaction-service/global"
-	"demotest/interaction-service/global/constant"
+	"demotest/douyin-api/globalinit/constant"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 

@@ -136,10 +136,6 @@ func CommentList(ctx *gin.Context) {
 	request := &comment.CommentListRequest{}
 	if token := ctx.Query("token"); token == "" {
 		zap.S().Errorw("token不存在")
-		ctx.JSON(constant.CommentActionErrCode, gin.H{
-			"error": constant.ErrorMsg,
-		})
-		return
 	} else {
 		request.Token = token
 	}

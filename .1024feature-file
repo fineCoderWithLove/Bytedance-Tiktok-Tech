@@ -1,0 +1,975 @@
+fileChangeLogs:
+  - '1'
+  - '.1024'
+  - go.mod
+  - main.go
+  - base-service/videoproto/google/protobuf/compiler/java/message_builder.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_reflection_class.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/unittest.inc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_unpacked.proto
+  - interaction-service/log/error/error.log
+  - base-service/videoproto/google/protobuf/unittest_embed_optimize_for.proto
+  - base-service/videoproto/google/protobuf/util/json_format_proto3.proto
+  - base-service/videoproto/google/protobuf/arena_align.h
+  - base-service/videoproto/google/protobuf/compiler/rust/accessors/accessors.cc
+  - base-service/videoproto/google/protobuf/descriptor.proto
+  - base-service/videoproto/google/protobuf/implicit_weak_message.h
+  - base-service/videoproto/google/protobuf/test_messages_proto3.proto
+  - interaction-service/dao/gen/gormGen.go
+  - base-service/videoproto/google/protobuf/compiler/objectivec/field.cc
+  - base-service/videoproto/google/protobuf/dynamic_message_unittest.cc
+  - base-service/videoproto/google/protobuf/generated_message_bases.h
+  - douyin-api/proto/video/video_grpc.pb.go
+  - interaction-service/log
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/message_serialization_unittest.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_unpacked.proto
+  - base-service/videoproto/google/protobuf/reflection_tester.cc
+  - >-
+    base-service/videoproto/google/protobuf/testdata/text_format_unittest_data.txt
+  - social-service/util
+  - interaction-service/handler
+  - base-service/videoproto/google/protobuf/compiler/csharp
+  - base-service/videoproto/google/protobuf/io/printer.h
+  - base-service/videoproto/google/protobuf/map_field.cc
+  - base-service/videoproto/google/protobuf/unittest_no_generic_services.proto
+  - base-service/videoproto/google/protobuf/compiler/cpp/generator.h
+  - base-service/videoproto/google/protobuf/io/zero_copy_stream_unittest.cc
+  - base-service/videoproto/google/protobuf/io/gzip_stream.h
+  - interaction-service/proto/user
+  - base-service/videoproto/google/protobuf/reflection.h
+  - douyin-api/api/video.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_repeated_enum_field.h
+  - base-service/videoproto/google/protobuf/compiler/java/enum_field_lite.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/oneof.cc
+  - base-service/videoproto/google/protobuf/internal_message_util.cc
+  - base-service/videoproto/google/protobuf/arena.h
+  - base-service/videoproto/google/protobuf/compiler/python/python_generator.h
+  - base-service/videoproto/google/protobuf/compiler/java/kotlin_generator.cc
+  - base-service/videoproto/google/protobuf/package_info.h
+  - base-service/videoproto/google/protobuf/test_util.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/line_consumer_unittest.cc
+  - base-service/videoproto/google/protobuf/io/zero_copy_stream.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/file.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/shared_code_generator.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_required.proto
+  - base-service/videoproto/google/protobuf/unittest_custom_options.proto
+  - douyin-api/proto/message/message.proto
+  - base-service/videoproto/google/protobuf/json/internal/unparser_traits.h
+  - base-service/videoproto/google/protobuf/json/internal/writer.cc
+  - social-service/router/followRoute.go
+  - base-service/videoproto/google/protobuf/compiler/java/enum.h
+  - interaction-service/server
+  - base-service/videoproto/google/protobuf/map_test_util.h
+  - base-service/videoproto/google/protobuf/reflection_ops.cc
+  - >-
+    base-service/videoproto/google/protobuf/unittest_preserve_unknown_enum2.proto
+  - base-service/videoproto/google/protobuf
+  - base-service/videoproto/google/protobuf/compiler/java/helpers.h
+  - base-service/videoproto/google/protobuf/compiler/java/service.cc
+  - >-
+    base-service/videoproto/google/protobuf/json/internal/zero_copy_buffered_stream.cc
+  - base-service/videoproto/google/protobuf/bridge/BUILD.bazel
+  - base-service/videoproto/google/protobuf/compiler/rust/naming.h
+  - douyin-api/util/grpcConnUtils.go
+  - base-service/global
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_repeated_message_field.cc
+  - base-service/videoproto/google/protobuf/compiler/python/plugin_unittest.cc
+  - base-service/videoproto/google/protobuf/unittest_proto3_bad_macros.proto
+  - base-service/videoproto/google/protobuf/arenastring_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/php/BUILD.bazel
+  - base-service/videoproto/google/protobuf/stubs/port.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/proto/editions_transform_proto3_utf8_disabled.proto
+  - base-service/videoproto/google/protobuf/map_field_test.cc
+  - base-service/videoproto/google/protobuf/unittest_proto3_optional.proto
+  - base-service/videoproto/google/protobuf/wrappers.pb.cc
+  - base-service/videoproto/google/protobuf/io
+  - base-service/videoproto/google/protobuf/map_lite_test_util.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/file.cc
+  - base-service/videoproto/google/protobuf/descriptor_unittest.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/compare_codegen_failure.txt
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/editions_transform_proto2.proto
+  - base-service/videoproto/google/protobuf/compiler/java/generator_factory.h
+  - base-service/videoproto/google/protobuf/text_format_unittest.cc
+  - douyin-api
+  - douyin-api/proto/favorite/favorite.pb.go
+  - base-service/videoproto/google/protobuf/compiler/objectivec/message_field.h
+  - base-service/videoproto/google/protobuf/io/zero_copy_sink.h
+  - base-service/videoproto/google/protobuf/source_context.pb.cc
+  - base-service/videoproto/google/protobuf/util/message_differencer.h
+  - base-service/videoproto/google/protobuf/compiler/subprocess.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/message.cc
+  - base-service/videoproto/google/protobuf/internal_message_util.h
+  - >-
+    base-service/videoproto/google/protobuf/json/internal/zero_copy_buffered_stream_test.cc
+  - base-service/videoproto/google/protobuf/map_type_handler.h
+  - base-service/videoproto/google/protobuf/metadata_lite.h
+  - >-
+    base-service/videoproto/google/protobuf/repeated_field_reflection_unittest.cc
+  - base-service/videoproto/google/protobuf/unittest_lazy_dependencies.proto
+  - douyin-api/proto/comment.proto
+  - base-service/videoproto/google/protobuf/compiler/java/primitive_field.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/text_format_decode_data.h
+  - base-service/videoproto/google/protobuf/compiler/command_line_interface.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_utf8_disabled.proto
+  - base-service/videoproto/google/protobuf/io/io_win32.h
+  - base-service/videoproto/video.proto
+  - base-service/videoproto/google/protobuf/compiler/java/message_field_lite.h
+  - base-service/videoproto/google/protobuf/editions
+  - base-service/videoproto/google/protobuf/empty.pb.h
+  - base-service/videoproto/google/protobuf/feature_resolver.h
+  - base-service/videoproto/google/protobuf/compiler/allowlists
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_enum.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/names.cc
+  - base-service/videoproto/google/protobuf/descriptor_visitor.h
+  - social-service/proto/user/user_grpc.pb.go
+  - base-service/videoproto/google/protobuf/compiler/java/java_generator.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_bootstrap_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/enum_field.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_import.proto
+  - base-service/videoproto/google/protobuf/io/io_win32.cc
+  - base-service/videoproto/google/protobuf/json/json_test.cc
+  - base-service/videoproto/google/protobuf/wrappers.pb.h
+  - base-service/videoproto/google/protobuf/json/internal/lexer.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/allowlists/allowlist_test.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_generator_unittest.cc
+  - base-service/videoproto/google/protobuf/any.pb.cc
+  - base-service/videoproto/google/protobuf/unittest_proto3_arena.proto
+  - base-service/videoproto/google/protobuf/io/zero_copy_sink.cc
+  - base-service/videoproto/google/protobuf/json/json.cc
+  - base-service/videoproto/google/protobuf/compiler/package_info.h
+  - base-service/videoproto/google/protobuf/compiler/scc.h
+  - base-service/videoproto/google/protobuf/cpp_features.pb.h
+  - base-service/videoproto/google/protobuf/field_mask.proto
+  - social-service/proto
+  - base-service/videoproto/google/protobuf/arena_cleanup.h
+  - base-service/videoproto/google/protobuf/compiler/retention_unittest.cc
+  - base-service/videoproto/google/protobuf/json/internal/writer.h
+  - base-service/videoproto/google/protobuf/util/type_resolver_util.cc
+  - base-service/videoproto/google/protobuf/compiler/java/map_field.h
+  - base-service/videoproto/google/protobuf/generated_enum_util.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/message_size_unittest.cc
+  - interaction-service/model/favorite.go
+  - base-service/videoproto/google/protobuf/io/zero_copy_sink_test.cc
+  - base-service/videoproto/google/protobuf/json/internal/lexer_test.cc
+  - base-service/model/video/videoinfo.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_pkg_implicit.proto
+  - base-service/videoproto/google/protobuf/editions/generated_files_test.cc
+  - base-service/videoproto/google/protobuf/compiler/java/string_field.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_group.proto
+  - base-service/videoproto/google/protobuf/generated_message_tctable_impl.h
+  - base-service/videoproto/google/protobuf/map_proto2_unittest.proto
+  - base-service/videoproto/google/protobuf/compiler/java/enum_field_lite.h
+  - base-service/videoproto/google/protobuf/compiler/plugin.pb.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_code_proto2_pb.rb
+  - base-service/test
+  - base-service/videoproto/google/protobuf/compiler/objectivec/helpers.h
+  - base-service/videoproto/google/protobuf/descriptor_database_unittest.cc
+  - douyin-api/api/favorite.go
+  - douyin-api/main.go
+  - douyin-api/proto/video/video.pb.go
+  - interaction-service/server/comment
+  - base-service/videoproto/google/protobuf/compiler/cpp/field.h
+  - base-service/videoproto/google/protobuf/compiler/java/primitive_field.cc
+  - base-service/videoproto/google/protobuf/extension_set_heavy.cc
+  - base-service/videoproto/google/protobuf/unittest_proto3_lite.proto
+  - base-service/videoproto/google/protobuf/map_entry.h
+  - douyin-api/router/user.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/field_generators/generators.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/unittest.cc
+  - base-service/videoproto/google/protobuf/port_undef.inc
+  - base-service/videoproto/google/protobuf/repeated_field.cc
+  - base-service/videoproto/google/protobuf/arenaz_sampler.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/proto/editions_transform_proto2_lite.proto
+  - >-
+    base-service/videoproto/google/protobuf/json/internal/zero_copy_buffered_stream.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/command_line_interface_tester.cc
+  - base-service/videoproto/google/protobuf/json/json.h
+  - base-service/videoproto/google/protobuf/compiler/rust/context.h
+  - base-service/videoproto/google/protobuf/dynamic_message.h
+  - base-service/videoproto/google/protobuf/json/BUILD.bazel
+  - base-service/videoproto/google/protobuf/json/internal/parser.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/cpp_generator.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_message_field.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_primitive_field.h
+  - base-service/videoproto/google/protobuf/compiler/rust/context.cc
+  - base-service/videoproto/google/protobuf/source_context.proto
+  - base-service/videoproto/google/protobuf/util/type_resolver_util_test.cc
+  - base-service/videoproto/google/protobuf/io/coded_stream_unittest.cc
+  - base-service/proto/favorite/favorite.pb.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/parse_function_generator.cc
+  - social-service/proto/user/user.pb.go
+  - base-service/videoproto/google/protobuf/testing/file.cc
+  - social-service/proto/relation/relation.pb.go
+  - base-service/videoproto/google/protobuf/compiler/cpp/file.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/tracker.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_source_generator_base.cc
+  - base-service/videoproto/google/protobuf/has_bits.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/metadata_test.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/editions_transform_proto3.proto
+  - base-service/videoproto/google/protobuf/compiler/objectivec/enum.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/text_format_decode_data.cc
+  - base-service/videoproto/google/protobuf/serial_arena.h
+  - base-service/videoproto/google/protobuf/testing/file.h
+  - douyin-api/redis/redisInit.go
+  - base-service/videoproto/google/protobuf/compiler/fake_plugin.cc
+  - base-service/videoproto/google/protobuf/generated_message_reflection.cc
+  - base-service/videoproto/google/protobuf/io/printer_unittest.cc
+  - base-service/videoproto/google/protobuf/stubs
+  - base-service/videoproto/google/protobuf/any_lite.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_pkg_implicit_pb.rb
+  - base-service/videoproto/google/protobuf/port.h
+  - base-service/videoproto/google/protobuf/string_member_robber.h
+  - interaction-service/dao/gen.go
+  - base-service/videoproto/google/protobuf/lite_unittest.cc
+  - base-service/videoproto/google/protobuf/map_lite_test_util.cc
+  - base-service/videoproto/google/protobuf/message.cc
+  - base-service/videoproto/google/protobuf/compiler/importer_unittest.cc
+  - base-service/videoproto/google/protobuf/editions/golden/simple_proto2.proto
+  - base-service/videoproto/google/protobuf/generated_enum_util.h
+  - base-service/videoproto/google/protobuf/generated_message_reflection.h
+  - base-service/videoproto/google/protobuf/json/internal
+  - base-service/videoproto/google/protobuf/unittest_arena.proto
+  - base-service/videoproto/google/protobuf/unknown_field_set_unittest.cc
+  - base-service/videoproto/google/protobuf/util/json_util.h
+  - base-service/videoproto/google/protobuf/api.pb.cc
+  - base-service/videoproto/google/protobuf/compiler/cpp
+  - base-service/videoproto/google/protobuf/duration.pb.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/compare_codegen_multiple.txt
+  - interaction-service/dao/gen
+  - base-service/videoproto/google/protobuf/wire_format_lite.cc
+  - base-service/videoproto/google/protobuf/map_field_lite.h
+  - >-
+    base-service/videoproto/google/protobuf/testdata/text_format_unittest_data_pointy.txt
+  - douyin-api/globalinit/logger.go
+  - douyin-api/proto/message
+  - social-service/service
+  - base-service/videoproto/google/protobuf/compiler/cpp/generator.cc
+  - base-service/videoproto/google/protobuf/compiler/java/name_resolver.cc
+  - base-service/videoproto/google/protobuf/compiler/parser.cc
+  - base-service/videoproto/google/protobuf/unittest_well_known_types.proto
+  - base-service/videoproto/google/protobuf/compiler/cpp/names.h
+  - base-service/videoproto/google/protobuf/test_messages_proto2.proto
+  - social-service/util/jwtUtil.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/command_line_interface_tester.h
+  - base-service/videoproto/google/protobuf/field_access_listener.h
+  - base-service/videoproto/google/protobuf/inlined_string_field_unittest.cc
+  - base-service/videoproto/google/protobuf/reflection_ops_unittest.cc
+  - interaction-service/proto/video/video.proto
+  - interaction-service/test.go
+  - base-service/videoproto/google/protobuf/compiler/java/kotlin_generator.h
+  - base-service/videoproto/google/protobuf/compiler/java/plugin_unittest.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/shared_code_generator.h
+  - base-service/videoproto/google/protobuf/timestamp.pb.cc
+  - base-service/handler
+  - base-service/videoproto/google/protobuf/compiler/cpp/enum.h
+  - base-service/videoproto/google/protobuf/compiler/java/extension_lite.h
+  - base-service/videoproto/google/protobuf/compiler/zip_output_unittest.sh
+  - base-service/videoproto/google/protobuf/field_mask.pb.cc
+  - base-service/videoproto/google/protobuf/wire_format_unittest.cc
+  - douyin-api/proto/favorite
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_code_pb.rb
+  - base-service/videoproto/google/protobuf/raw_ptr_test.cc
+  - interaction-service/log/info/info.log
+  - base-service/videoproto/google/protobuf/unittest_preserve_unknown_enum.proto
+  - social-service/proto/message
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_field_base.cc
+  - base-service/videoproto/google/protobuf/compiler/zip_writer.h
+  - >-
+    base-service/videoproto/google/protobuf/generated_message_tctable_lite_test.cc
+  - base-service/videoproto/google/protobuf/map.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/enum.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/line_consumer.h
+  - base-service/videoproto/google/protobuf/util/type_resolver_util.h
+  - social-service/main.go
+  - >-
+    base-service/videoproto/google/protobuf/editions/proto/editions_transform_proto3.proto
+  - base-service/videoproto/google/protobuf/compiler/csharp/names.cc
+  - base-service/videoproto/google/protobuf/compiler/java/BUILD.bazel
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_pkg_explicit_legacy.proto
+  - base-service/videoproto/google/protobuf/stubs/BUILD.bazel
+  - >-
+    base-service/videoproto/google/protobuf/compiler/rust/accessors/singular_scalar.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_utf8_verify.proto
+  - base-service/videoproto/google/protobuf/has_bits_test.cc
+  - base-service/videoproto/google/protobuf/map_field_inl.h
+  - base-service/util
+  - base-service/videoproto/google/protobuf/compiler/java/enum_field.cc
+  - base-service/videoproto/google/protobuf/json
+  - base-service/videoproto/google/protobuf/unittest_import.proto
+  - base-service/videoproto/google/protobuf/compiler/java/names.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generator_unittest.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/generated_reflection_test.cc
+  - base-service/videoproto/google/protobuf/editions/golden
+  - base-service/videoproto/google/protobuf/map_test.inc
+  - base-service/videoproto/google/protobuf/compiler/cpp/padding_optimizer.cc
+  - base-service/videoproto/google/protobuf/compiler/python/helpers.h
+  - douyin-api/api/comment.go
+  - interaction-service/proto/user/user_grpc.pb.go
+  - base-service/videoproto/google/protobuf/testing/googletest.h
+  - >-
+    base-service/videoproto/google/protobuf/util/message_differencer_unittest_proto3.proto
+  - base-service/videoproto/google/protobuf/compiler/cpp/bootstrap_unittest.cc
+  - base-service/videoproto/google/protobuf/io/zero_copy_stream_impl_lite.h
+  - base-service/videoproto/google/protobuf/service.cc
+  - base-service/videoproto/google/protobuf/test_util.h
+  - base-service/videoproto/google/protobuf/port_test.cc
+  - douyin-api/globalinit/constant/favorite.go
+  - base-service/videoproto/google/protobuf/unittest_no_field_presence.proto
+  - base-service/proto/favorite
+  - douyin-api/router
+  - base-service/videoproto/google/protobuf/io/coded_stream.cc
+  - douyin-api/globalinit/constant
+  - interaction-service/proto/favorite.proto
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/test_large_enum_value.proto
+  - base-service/videoproto/google/protobuf/compiler/java/context.cc
+  - base-service/videoproto/google/protobuf/compiler/java/generator.h
+  - base-service/videoproto/google/protobuf/compiler/parser_unittest.cc
+  - interaction-service/proto/favorite/favorite.pb.go
+  - base-service/videoproto/google/protobuf/descriptor_visitor_test.cc
+  - base-service/videoproto/google/protobuf/field_mask.pb.h
+  - base-service/videoproto/google/protobuf/map_entry_lite.h
+  - base-service/videoproto/google/protobuf/testdata/golden_message_proto3
+  - base-service/videoproto/google/protobuf/repeated_ptr_field.cc
+  - base-service/videoproto/google/protobuf/compiler/java
+  - base-service/videoproto/google/protobuf/io/printer.cc
+  - base-service/videoproto/google/protobuf/map_lite_unittest.proto
+  - base-service/videoproto/google/protobuf/compiler/rust/message.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/test_messages_proto2.proto
+  - base-service/videoproto/google/protobuf/json/internal/unparser.cc
+  - base-service/videoproto/google/protobuf/compiler/python/helpers.cc
+  - douyin-api/globalinit/router.go
+  - douyin-api/api/useraction.go
+  - douyin-api/proto/comment
+  - interaction-service/proto/comment
+  - base-service/videoproto/google/protobuf/io/BUILD.bazel
+  - base-service/videoproto/google/protobuf/test_util.inc
+  - base-service/videoproto/google/protobuf/duration.pb.h
+  - base-service/videoproto/google/protobuf/generated_message_tctable_gen.cc
+  - douyin-api/router/comment.go
+  - social-service/service/followService.go
+  - base-service/videoproto/google/protobuf/compiler/java/field.cc
+  - base-service/videoproto/google/protobuf/json/internal/untyped_message.cc
+  - base-service/videoproto/google/protobuf/type.proto
+  - base-service/videoproto/google/protobuf/io/io_win32_unittest.cc
+  - base-service/videoproto/google/protobuf/util/time_util.cc
+  - interaction-service/handler/favorite_test.go
+  - base-service/videoproto/google/protobuf/compiler/importer.h
+  - interaction-service/go.sum
+  - base-service/videoproto/google/protobuf/compiler/objectivec/import_writer.cc
+  - base-service/videoproto/google/protobuf/wrappers.proto
+  - base-service/videoproto/google/protobuf/inlined_string_field.cc
+  - base-service/videoproto/google/protobuf/struct.proto
+  - base-service/videoproto/google/protobuf/unittest_mset.proto
+  - base-service/videoproto/google/protobuf/compiler/java/doc_comment.h
+  - base-service/global/constant
+  - base-service/videoproto/google/protobuf/compiler/java/string_field.h
+  - base-service/videoproto/google/protobuf/compiler/java/string_field_lite.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_pkg_explicit.proto
+  - base-service/videoproto/google/protobuf/descriptor.pb.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/proto/editions_transform_proto2_utf8_disabled.proto
+  - interaction-service/server/comment/comment
+  - social-service/global
+  - base-service/videoproto/google/protobuf/map_test_util_impl.h
+  - base-service/videoproto/google/protobuf/repeated_field_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_field_base.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/line_consumer.cc
+  - base-service/videoproto/google/protobuf/cpp_features.pb.cc
+  - base-service/videoproto/google/protobuf/editions/proto
+  - base-service/videoproto/google/protobuf/generated_message_bases.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/primitive_field_lite.cc
+  - base-service/videoproto/google/protobuf/compiler/rust
+  - douyin-api/globalinit/constant/common.go
+  - base-service/videoproto/google/protobuf/compiler/java/doc_comment.cc
+  - base-service/videoproto/google/protobuf/test_util_lite.cc
+  - base-service/global/constant/common.go
+  - interaction-service/proto/video/video_grpc.pb.go
+  - social-service/handler/relation.go
+  - base-service/videoproto/google/protobuf/BUILD.bazel
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_utf8_strict.proto
+  - base-service/videoproto/google/protobuf/stubs/platform_macros.h
+  - interaction-service/handler/favorite.go
+  - base-service/videoproto/google/protobuf/internal_visibility_for_testing.h
+  - base-service/videoproto/video.pb.go
+  - base-service/go.mod
+  - base-service/proto/user.pb.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/field_generators/cord_field.cc
+  - base-service/videoproto/google/protobuf/extension_set_unittest.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/message_serialization.h
+  - base-service/videoproto/google/protobuf/compiler/plugin.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/proto/editions_transform_proto2.proto
+  - base-service/videoproto/google/protobuf/extension_set.h
+  - base-service/videoproto/google/protobuf/unittest_empty.proto
+  - douyin-api/proto/favorite.proto
+  - interaction-service
+  - base-service/videoproto/google/protobuf/bridge
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_import.proto
+  - >-
+    base-service/videoproto/google/protobuf/generated_message_reflection_unittest.cc
+  - base-service/videoproto/google/protobuf/any_test.cc
+  - base-service/videoproto/google/protobuf/compiler/java/message_builder_lite.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/editions_transform_proto2_utf8_disabled.proto
+  - base-service/videoproto/google/protobuf/reflection_internal.h
+  - base-service/videoproto/google/protobuf/util/BUILD.bazel
+  - base-service/videoproto/google/protobuf/compiler/cpp/extension.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/extension.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/test_bad_identifiers.proto
+  - base-service/videoproto/google/protobuf/generated_message_util.h
+  - base-service/videoproto/google/protobuf/test_util_lite.h
+  - base-service/videoproto/google/protobuf/arena.cc
+  - base-service/videoproto/google/protobuf/io/gzip_stream.cc
+  - base-service/videoproto/google/protobuf/compiler/cpp/extension.cc
+  - base-service/videoproto/google/protobuf/map_test_util.inc
+  - base-service/videoproto/google/protobuf/unittest_lite.proto
+  - interaction-service/og
+  - base-service/videoproto/google/protobuf/any.pb.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_doc_comment.cc
+  - base-service/videoproto/google/protobuf/extension_set_inl.h
+  - base-service/videoproto/google/protobuf/map_field.h
+  - base-service/videoproto/google/protobuf/compiler/rust/accessors/accessors.h
+  - base-service/videoproto/google/protobuf/varint_shuffle_test.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/field_generators/map_field.cc
+  - base-service/videoproto/google/protobuf/compiler/retention.h
+  - base-service/videoproto/google/protobuf/generated_message_tctable_gen.h
+  - douyin-api/proto/user
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/doc_comment_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/import_writer.h
+  - base-service/videoproto/google/protobuf/compiler/rust/relative_path.cc
+  - base-service/videoproto/google/protobuf/compiler/test_plugin.cc
+  - base-service/videoproto/google/protobuf/compiler/java/map_field_lite.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/message_serialization.cc
+  - douyin-api/api/user.go
+  - base-service/proto
+  - base-service/videoproto/google/protobuf/compiler/BUILD.bazel
+  - base-service/videoproto/google/protobuf/no_field_presence_test.cc
+  - base-service/videoproto/google/protobuf/arena_align.cc
+  - base-service/videoproto/google/protobuf/compiler/php/names.cc
+  - interaction-service/proto/video/video.pb.go
+  - base-service/videoproto/google/protobuf/arenastring.cc
+  - base-service/videoproto/google/protobuf/compiler/ruby/BUILD.bazel
+  - >-
+    base-service/videoproto/google/protobuf/compiler/rust/accessors/singular_bytes.cc
+  - base-service/videoproto/google/protobuf/testdata/bad_utf8_string
+  - base-service/videoproto/google/protobuf/unittest_import_public.proto
+  - douyin-api/api/message.go
+  - base-service/videoproto/google/protobuf/unittest_mset_wire_format.proto
+  - interaction-service/server/favorite
+  - base-service/videoproto/google/protobuf/util/delimited_message_util_test.cc
+  - interaction-service/global/loggerInit.go
+  - base-service/videoproto/google/protobuf/util/field_mask_util.h
+  - base-service/util/redisUtil.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/parse_function_generator.h
+  - base-service/videoproto/google/protobuf/compiler/java/enum_lite.h
+  - base-service/videoproto/google/protobuf/compiler/rust/relative_path_test.cc
+  - base-service/videoproto/google/protobuf/io/tokenizer.h
+  - interaction-service/go.mod
+  - base-service/videoproto/google/protobuf/redaction_metric_test.cc
+  - base-service/videoproto/google/protobuf/arena_test_util.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/map_field.cc
+  - base-service/videoproto/google/protobuf/port.cc
+  - base-service/videoproto/video_grpc.pb.go
+  - interaction-service/proto/video
+  - base-service/util/jwtUtil.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/nsobject_methods.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_packed.proto
+  - >-
+    base-service/videoproto/google/protobuf/testdata/text_format_unittest_extensions_data_pointy.txt
+  - douyin-api/api
+  - douyin-api/global
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_options.h
+  - douyin-api/proto/user/user.proto
+  - interaction-service/og/error/error.log
+  - base-service/videoproto/google/protobuf/compiler
+  - base-service/videoproto/google/protobuf/map_test.cc
+  - base-service/videoproto/google/protobuf/unittest_invalid_features.proto
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/names_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/zip_writer.cc
+  - >-
+    base-service/videoproto/google/protobuf/testdata/text_format_unittest_data_oneof_implemented.txt
+  - douyin-api/global/global.go
+  - interaction-service/proto/comment.proto
+  - readme.md
+  - base-service/videoproto/google/protobuf/compiler/java/enum_field.h
+  - base-service/videoproto/google/protobuf/compiler/java/file.h
+  - base-service/videoproto/google/protobuf/message_unittest.cc
+  - base-service/videoproto/google/protobuf/reflection_ops.h
+  - douyin-api/main
+  - go.sum
+  - base-service/videoproto/google/protobuf/duration.proto
+  - base-service/videoproto/google/protobuf/implicit_weak_message.cc
+  - base-service/videoproto/google/protobuf/io/coded_stream.h
+  - base-service/videoproto/google/protobuf/repeated_field.h
+  - base-service/videoproto/google/protobuf/editions/transform.awk
+  - base-service/videoproto/google/protobuf/stubs/status_macros.h
+  - base-service/videoproto/google/protobuf/varint_shuffle.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/map_field.h
+  - social-service/router
+  - base-service/videoproto/google/protobuf/compiler/objectivec/message.cc
+  - base-service/videoproto/google/protobuf/descriptor_legacy.h
+  - base-service/videoproto/google/protobuf/timestamp.proto
+  - social-service/proto/user/user.proto
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/text_format_decode_data_unittest.cc
+  - base-service/videoproto/google/protobuf/json/internal/untyped_message.h
+  - interaction-service/server/favorite/favorite.go
+  - social-service/handler
+  - base-service/videoproto/google/protobuf/util/delimited_message_util.h
+  - base-service/videoproto/google/protobuf/arena_align_test.cc
+  - base-service/videoproto/google/protobuf/compiler/cpp/helpers.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/command_line_interface_unittest.cc
+  - base-service/videoproto/google/protobuf/internal_message_util_unittest.cc
+  - douyin-api/globalinit
+  - base-service/videoproto/google/protobuf/metadata.h
+  - base-service/videoproto/google/protobuf/compiler/command_line_interface.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_optional.proto
+  - base-service/videoproto/google/protobuf/retention_test.cc
+  - base-service/videoproto/google/protobuf/test_textproto.h
+  - base-service/videoproto/google/protobuf/compiler/ruby/ruby_generator.h
+  - base-service/videoproto/google/protobuf/io/tokenizer_unittest.cc
+  - base-service/videoproto/google/protobuf/text_format.cc
+  - base-service/videoproto/google/protobuf/compiler/cpp/message.h
+  - base-service/videoproto/google/protobuf/compiler/java/context.h
+  - base-service/videoproto/google/protobuf/compiler/java/helpers.cc
+  - base-service/videoproto/google/protobuf/test_util2.h
+  - base-service/videoproto/google/protobuf/compiler/java/message.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_code_proto2.proto
+  - base-service/videoproto/google/protobuf/testing
+  - base-service/go.sum
+  - base-service/test/user_test.go
+  - base-service/videoproto/google/protobuf/compiler/allowlists/editions.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/names.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/tracker.cc
+  - douyin-api/proto/video
+  - base-service/videoproto/google/protobuf/compiler/objectivec/enum_field.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/message_field.cc
+  - base-service/videoproto/google/protobuf/cpp_features.proto
+  - base-service/videoproto/google/protobuf/dynamic_message.cc
+  - base-service/videoproto/google/protobuf/compiler/mock_code_generator.h
+  - base-service/videoproto/google/protobuf/testdata/map_test_data.txt
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_map_field.cc
+  - base-service/videoproto/google/protobuf/compiler/rust/message.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/editions_transform_proto3_utf8_disabled.proto
+  - base-service/videoproto/google/protobuf/descriptor.cc
+  - base-service/videoproto/google/protobuf/editions/codegen_tests/BUILD
+  - base-service/videoproto/google/protobuf/lite_arena_unittest.cc
+  - base-service/videoproto/google/protobuf/unittest_proto3_arena_lite.proto
+  - base-service/videoproto/google/protobuf/compiler/cpp/service.h
+  - base-service/videoproto/google/protobuf/thread_safe_arena.h
+  - interaction-service/model/videoinfo.go
+  - base-service/videoproto/google/protobuf/generated_message_util.cc
+  - base-service/videoproto/google/protobuf/repeated_ptr_field.h
+  - >-
+    base-service/videoproto/google/protobuf/unittest_lazy_dependencies_custom_option.proto
+  - base-service/videoproto/google/protobuf/compiler/allowlists/allowlists.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/compare_codegen_multiple.xml
+  - base-service/videoproto/google/protobuf/io/strtod.h
+  - base-service/videoproto/google/protobuf/parse_context.cc
+  - social-service/social
+  - base-service/videoproto/google/protobuf/compiler/java/extension_lite.cc
+  - base-service/videoproto/google/protobuf/stubs/common.h
+  - base-service/videoproto/google/protobuf/compiler/rust/accessors
+  - base-service/videoproto/google/protobuf/util/json_format.proto
+  - interaction-service/server/comment/comment.go
+  - social-service/proto/favorite
+  - base-service/videoproto/google/protobuf/util/time_util_test.cc
+  - douyin-api/redis
+  - base-service/videoproto/google/protobuf/compiler/objectivec/generator.h
+  - base-service/videoproto/google/protobuf/compiler/python/pyi_generator.cc
+  - base-service/videoproto/google/protobuf/io/printer_death_test.cc
+  - base-service/videoproto/google/protobuf/testdata/golden_message_maps
+  - >-
+    base-service/videoproto/google/protobuf/util/message_differencer_unittest.proto
+  - douyin-api/proto/relation/relation.proto
+  - interaction-service/model/comment.go
+  - base-service/videoproto/google/protobuf/compiler/cpp/generator_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/java/message.h
+  - base-service/videoproto/google/protobuf/compiler/php
+  - base-service/videoproto/google/protobuf/compiler/ruby
+  - base-service/videoproto/google/protobuf/api.proto
+  - base-service/videoproto/google/protobuf/compiler/python/BUILD.bazel
+  - base-service/videoproto/google/protobuf/compiler/java/message_field.cc
+  - base-service/videoproto/google/protobuf/io/test_zero_copy_stream_test.cc
+  - base-service/videoproto/google/protobuf/io/tokenizer.cc
+  - base-service/videoproto/google/protobuf/json/internal/lexer.cc
+  - base-service/videoproto/google/protobuf/arena_allocation_policy.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/field.cc
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_message.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_wrapper_field.cc
+  - social-service/global/global.go
+  - base-service/videoproto/google/protobuf/wire_format.cc
+  - interaction-service/global/global.go
+  - base-service/videoproto/google/protobuf/compiler/objectivec/BUILD.bazel
+  - base-service/videoproto/google/protobuf/compiler/objectivec/enum.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_pkg_explicit_pb.rb
+  - base-service/videoproto/google/protobuf/proto3_arena_unittest.cc
+  - base-service/handler/video.go
+  - base-service/videoproto/google/protobuf/api.pb.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/field_generators
+  - base-service/videoproto/google/protobuf/reflection_tester.h
+  - base-service/videoproto/google/protobuf/any_test.proto
+  - base-service/videoproto/google/protobuf/compiler/objectivec
+  - base-service/videoproto/google/protobuf/descriptor_database.h
+  - base-service/videoproto/google/protobuf/json/internal/unparser.h
+  - base-service/videoproto/google/protobuf/util/message_differencer.cc
+  - interaction-service/proto/user/user.pb.go
+  - base-service/videoproto/google/protobuf/stubs/common.cc
+  - base-service/videoproto/google/protobuf/stubs/common_unittest.cc
+  - base-service/videoproto/google/protobuf/unittest_drop_unknown_fields.proto
+  - >-
+    base-service/videoproto/google/protobuf/unittest_lazy_dependencies_enum.proto
+  - base-service/videoproto/google/protobuf/compiler/code_generator_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/cpp/service.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/generator.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/options.h
+  - interaction-service/handler/comment.go
+  - interaction-service/handler/comment_test.go
+  - base-service/videoproto/google/protobuf/compiler/allowlists/BUILD.bazel
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_map_field.h
+  - base-service/videoproto/google/protobuf/util
+  - base-service/videoproto/google/protobuf/util/time_util.h
+  - douyin-api/proto/user/user.pb.go
+  - base-service/videoproto/google/protobuf/any.proto
+  - base-service/videoproto/google/protobuf/compiler/mock_code_generator.cc
+  - base-service/videoproto/google/protobuf/message_lite.cc
+  - base-service/videoproto/google/protobuf/well_known_types_unittest.cc
+  - interaction-service/log/info
+  - base-service/videoproto/google/protobuf/timestamp.pb.h
+  - base-service/videoproto/google/protobuf/util/field_mask_util.cc
+  - douyin-api/proto/user/user_grpc.pb.go
+  - >-
+    base-service/videoproto/google/protobuf/testdata/text_format_unittest_data_pointy_oneof.txt
+  - base-service/global/global.go
+  - base-service/videoproto/google/protobuf/compiler/csharp/BUILD.bazel
+  - base-service/videoproto/google/protobuf/compiler/java/field.h
+  - base-service/videoproto/google/protobuf/map.cc
+  - base-service/videoproto/google/protobuf/wire_format_lite.h
+  - interaction-service/proto/user/user.proto
+  - base-service/videoproto/google/protobuf/compiler/cpp/helpers.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/message_serialization_unittest.proto
+  - base-service/videoproto/google/protobuf/compiler/objectivec/field.h
+  - base-service/videoproto/google/protobuf/descriptor.pb.h
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_doc_comment.h
+  - base-service/videoproto/google/protobuf/compiler/rust/relative_path.h
+  - base-service/videoproto/google/protobuf/testing/googletest.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/java/message_builder_lite.cc
+  - base-service/videoproto/google/protobuf/testing/BUILD.bazel
+  - interaction-service/proto/comment/comment.pb.go
+  - douyin-api/util
+  - >-
+    base-service/videoproto/google/protobuf/testdata/golden_message_oneof_implemented
+  - douyin-api/proto/message/message.pb.go
+  - interaction-service/model
+  - interaction-service/proto/favorite
+  - base-service/videoproto/google/protobuf/compiler/allowlists/empty_package.cc
+  - base-service/videoproto/google/protobuf/compiler/java/enum.cc
+  - base-service/videoproto/google/protobuf/compiler/java/options.h
+  - base-service/videoproto/google/protobuf/map_proto3_unittest.proto
+  - base-service/videoproto/google/protobuf/editions/codegen_tests
+  - base-service/videoproto/google/protobuf/unknown_field_set.cc
+  - base-service/videoproto/google/protobuf/compiler/allowlists/allowlist.h
+  - base-service/videoproto/google/protobuf/compiler/annotation_test_util.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_wrapper_field.h
+  - base-service/videoproto/google/protobuf/compiler/java/message_field_lite.cc
+  - base-service/videoproto/google/protobuf/compiler/python/pyi_generator.h
+  - base-service/videoproto/google/protobuf/unittest.proto
+  - interaction-service/server/favorite/favorite
+  - base-service/proto/user.proto
+  - base-service/videoproto/google/protobuf/descriptor.h
+  - base-service/videoproto/google/protobuf/raw_ptr.h
+  - >-
+    base-service/videoproto/google/protobuf/testdata/text_format_unittest_extensions_data.txt
+  - >-
+    base-service/videoproto/google/protobuf/compiler/allowlists/unused_imports.cc
+  - base-service/videoproto/google/protobuf/compiler/ruby/ruby_generator.cc
+  - base-service/videoproto/google/protobuf/json/internal/parser.cc
+  - social-service/proto/favorite/favorite.pb.go
+  - base-service/videoproto/google/protobuf/arenaz_sampler_test.cc
+  - base-service/videoproto/google/protobuf/raw_ptr.cc
+  - base-service/videoproto/google/protobuf/unknown_field_set.h
+  - douyin-api/proto/message/message_grpc.pb.go
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_packed.proto
+  - douyin-api/proto/video/video.proto
+  - interaction-service/proto
+  - base-service/videoproto/google/protobuf/compiler/code_generator.h
+  - base-service/videoproto/google/protobuf/compiler/php/php_generator.cc
+  - base-service/videoproto/google/protobuf/compiler/plugin.pb.cc
+  - douyin-api/go.mod
+  - base-service/videoproto/google/protobuf/compiler/java/map_field.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_pkg_explicit_legacy_pb.rb
+  - base-service/videoproto/google/protobuf/util/message_differencer_unittest.cc
+  - base-service/videoproto/google/protobuf/compiler/code_generator.cc
+  - base-service/videoproto/google/protobuf/compiler/importer.cc
+  - base-service/videoproto/google/protobuf/compiler/java/extension.h
+  - base-service/videoproto/google/protobuf/editions/BUILD
+  - base-service/videoproto/google/protobuf/inlined_string_field.h
+  - base-service/videoproto/google/protobuf/string_block_test.cc
+  - base-service/videoproto/google/protobuf/compiler/csharp/names.h
+  - base-service/videoproto/google/protobuf/compiler/java/map_field_lite.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_utf8_disabled.proto
+  - interaction-service/dao
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_generator.cc
+  - base-service/videoproto/google/protobuf/compiler/java/generator.cc
+  - base-service/videoproto/google/protobuf/json/internal/parser_traits.h
+  - base-service/videoproto/google/protobuf/compiler/java/message_field.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/method_dump.sh
+  - base-service/videoproto/google/protobuf/service.h
+  - base-service/videoproto/google/protobuf/arena_unittest.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/field_generators/primitive_field.cc
+  - base-service/videoproto/google/protobuf/compiler/cpp/unittest.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_source_generator_base.h
+  - base-service/videoproto/google/protobuf/generated_message_tctable_lite.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_primitive_field.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_implicit.proto
+  - base-service/videoproto/google/protobuf/feature_resolver.cc
+  - base-service/videoproto/google/protobuf/proto3_arena_lite_unittest.cc
+  - base-service/videoproto/google/protobuf/arenastring.h
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_enum.h
+  - base-service/videoproto/google/protobuf/compiler/php/php_generator.h
+  - social-service
+  - social-service/handler/message.go
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.h
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/compare_codegen_success.txt
+  - base-service/videoproto/google/protobuf/generated_message_tctable_full.cc
+  - base-service/videoproto/google/protobuf/string_block.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_message_field.cc
+  - base-service/videoproto/google/protobuf/compiler/java/message_builder.h
+  - base-service/videoproto/google/protobuf/unittest_retention.proto
+  - interaction-service/log/error
+  - base-service/videoproto/google/protobuf/proto3_lite_unittest.inc
+  - base-service/videoproto/google/protobuf/reflection_mode_test.cc
+  - douyin-api/proto/relation/relation.pb.go
+  - interaction-service/global
+  - base-service/videoproto/google/protobuf/compiler/rust/generator.h
+  - base-service/videoproto/google/protobuf/io/zero_copy_stream.h
+  - base-service/videoproto/google/protobuf/port_def.inc
+  - base-service/global/constant/comment.go
+  - base-service/videoproto/google/protobuf/wire_format.h
+  - base-service/videoproto/google/protobuf/json/internal/test_input_stream.h
+  - social-service/proto/relation/relation.proto
+  - base-service/videoproto/google/protobuf/compiler/allowlists/open_enum.cc
+  - base-service/videoproto/google/protobuf/compiler/subprocess.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto3_enum.proto
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/test_messages_proto3.proto
+  - base-service/videoproto/google/protobuf/unittest_import_lite.proto
+  - base-service/videoproto/google/protobuf/any.cc
+  - base-service/videoproto/google/protobuf/message.h
+  - base-service/videoproto/google/protobuf/type.pb.h
+  - base-service/videoproto/google/protobuf/descriptor_database.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_optional.proto
+  - base-service/main.go
+  - base-service/videoproto/google/protobuf/any.h
+  - base-service/videoproto/google/protobuf/compiler/cpp/BUILD.bazel
+  - base-service/videoproto/google/protobuf/compiler/cpp/padding_optimizer.h
+  - base-service/videoproto/google/protobuf/unittest_enormous_descriptor.proto
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_enum_field.cc
+  - base-service/videoproto/google/protobuf/generated_enum_util_test.cc
+  - base-service/videoproto/google/protobuf/unittest_optimize_for.proto
+  - social-service/proto/relation
+  - base-service/videoproto/google/protobuf/compiler/java/string_field_lite.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/primitive_field.h
+  - base-service/videoproto/google/protobuf/compiler/rust/naming.cc
+  - base-service/videoproto/google/protobuf/feature_resolver_test.cc
+  - base-service/videoproto/google/protobuf/compiler/objectivec/helpers.cc
+  - >-
+    base-service/videoproto/google/protobuf/testdata/golden_packed_fields_message
+  - base-service/videoproto/google/protobuf/compiler/java/generator_factory.cc
+  - base-service/videoproto/google/protobuf/explicitly_constructed.h
+  - base-service/videoproto/google/protobuf/io/strtod.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_utf8_lite.proto
+  - base-service/videoproto/google/protobuf/empty.proto
+  - base-service/videoproto/google/protobuf/io/test_zero_copy_stream.h
+  - base-service/videoproto/google/protobuf/message_unittest.inc
+  - base-service/videoproto
+  - base-service/videoproto/google/protobuf/compiler/python
+  - >-
+    base-service/videoproto/google/protobuf/editions/codegen_tests/proto2_enum.proto
+  - base-service/videoproto/google/protobuf/unittest_import_public_lite.proto
+  - base-service
+  - base-service/videoproto/google/protobuf/compiler/java/primitive_field_lite.h
+  - base-service/videoproto/google/protobuf/empty.pb.cc
+  - base-service/videoproto/google/protobuf/json/internal/message_path.h
+  - base-service/videoproto/google/protobuf/struct.pb.cc
+  - base-service/proto/user_grpc.pb.go
+  - base-service/videoproto/google/protobuf/arenaz_sampler.cc
+  - douyin-api/go.sum
+  - base-service/videoproto/google/protobuf/drop_unknown_fields_test.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc
+  - base-service/videoproto/google/protobuf/compiler/java/message_lite.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/objectivec/primitive_field.cc
+  - base-service/base
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/compare_codegen_success.xml
+  - social-service/proto/message/message_grpc.pb.go
+  - base-service/videoproto/google/protobuf/struct.pb.h
+  - base-service/videoproto/google/protobuf/wire_format_unittest.inc
+  - base-service/videoproto/google/protobuf/compiler/python/generator.cc
+  - >-
+    base-service/videoproto/google/protobuf/editions/golden/compare_codegen_failure.xml
+  - base-service/videoproto/google/protobuf/unittest_lite_imports_nonlite.proto
+  - base-service/videoproto/google/protobuf/compiler/annotation_test_util.cc
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_code_proto2_import.proto
+  - base-service/videoproto/google/protobuf/internal_visibility.h
+  - base-service/videoproto/google/protobuf/source_context.pb.h
+  - base-service/videoproto/google/protobuf/util/field_comparator.cc
+  - douyin-api/util/authMiddleware.go
+  - social-service/proto/relation/relation_grpc.pb.go
+  - base-service/videoproto/google/protobuf/endian.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/extension.h
+  - base-service/videoproto/google/protobuf/compiler/objectivec/message.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/ruby/ruby_generated_code.proto
+  - base-service/videoproto/google/protobuf/compiler/java/name_resolver.h
+  - douyin-api/util/redisUtil.go
+  - base-service/videoproto/google/protobuf/parse_context.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/field_generators/enum_field.cc
+  - base-service/videoproto/google/protobuf/compiler/csharp/csharp_helpers.cc
+  - base-service/videoproto/google/protobuf/compiler/rust/BUILD.bazel
+  - base-service/videoproto/google/protobuf/extension_set.cc
+  - base-service/videoproto/google/protobuf/util/type_resolver.h
+  - douyin-api/proto/comment/comment.pb.go
+  - base-service/videoproto/google/protobuf/stubs/callback.h
+  - base-service/videoproto/google/protobuf/util/package_info.h
+  - >-
+    base-service/videoproto/google/protobuf/compiler/cpp/field_generators/string_field.cc
+  - base-service/videoproto/google/protobuf/compiler/cpp/plugin_unittest.cc
+  - .gitignore
+  - log/info
+  - log
+  - log/info/info.log
+  - run.sh
+  - nohup.out
+  - douyin-api/cmd/main.go
+  - 20230905124634_20230901150436_VID20230823191354.mp4
+  - 20230905124635.jpg
+  - 20230905125549_20230830103259_VID20230829234538.mp4
+  - 20230905125550.jpg
+  - 20230906132515_VID20230803120848.mp4
+  - 20230906132517.jpg
+  - base.log
+  - comment.log
+  - api.log
+  - favorite.log
+  - social.log
+  - 20230906141454_chinesesolfware.mp4
+  - 20230906141454.jpg
+  - 20230906172337_VIDEO_20230906_172030596.mp4
+  - 20230906172340.jpg
+  - 20230906172403_VIDEO_20230906_172030596.mp4
+  - 20230906172404.jpg
+  - 20230906172406_VIDEO_20230906_172030596.mp4
+  - 20230906172407.jpg
+  - 20230906172409_VIDEO_20230906_172030596.mp4
+  - 20230906172411.jpg
+  - log/error
+  - log/error/error.log
+  - 20230906173353_mmexport1693877684436.mp4
+  - 20230906173354.jpg
+  - 20230906173659_share_b272f27887143f8e7dc139fb32c6d4f3.mp4
+  - 20230906173700.jpg
+  - 20230906173707_share_b272f27887143f8e7dc139fb32c6d4f3.mp4
+  - 20230906173708.jpg
+  - commentMiddleware.go
+  - douyin-api/util/commentMiddleware.go
+  - wordFilter.go
+  - douyin-api/util/wordFilter.go
+  - pub_sms_banned_words.txt
+  - redislog.log
+  - 20230911084535_1aaaaaaaa.mp4
+  - 20230911084536.jpg
+  - 20230911084631_杰伦.mp4
+  - 20230911084632.jpg
+  - 20230911084852_二次测试5.mp4
+  - 20230911084853.jpg
+  - 20230915174353_扣篮.mp4
+  - 20230915174353.jpg
+  - douyin-api/util/middleware.go

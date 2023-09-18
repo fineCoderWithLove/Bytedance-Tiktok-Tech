@@ -50,7 +50,7 @@ type User struct {
 	FavoriteCount   int64
 }
 func extractVideoFrame(videoPath, imagePath string) error {
-	cmd := exec.Command("./ffmpeg-6.0-essentials_build/bin/ffmpeg.exe", "-i", videoPath, "-ss", "00:00:00.001", "-vframes", "1", imagePath)
+	cmd := exec.Command("ffmpeg", "-i", videoPath, "-ss", "00:00:00.001", "-vframes", "1", imagePath)
 	err := cmd.Run()
 	if err != nil {
 		return err

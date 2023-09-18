@@ -1,0 +1,2 @@
+net: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
+google.golang.org/protobuf/internal/impl: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed

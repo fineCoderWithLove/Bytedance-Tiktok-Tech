@@ -1,7 +1,7 @@
 package global
 
 import (
-	"demotest/interaction-service/global/constant"
+	"demotest/douyin-api/globalinit/constant"
 	"github.com/go-redis/redis"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

@@ -7,6 +7,7 @@ import (
 	"net/http"
 	//导包
 	_ "net/http/pprof"
+	"demotest/douyin-api/util"
 )
 //配置
 func startPProfServer() {
@@ -18,12 +19,15 @@ func startPProfServer() {
 	}()
 }
 func main() {
-	port := 9999
+	port := 8080
 	//初始化logger
 	globalinit.InitLogger()
 	//初始化routers
 	routers := globalinit.Routers()
-
+	//初始化redis
+	util.InitRedisData()
+	//初始化敏感词过滤器
+	util.InitWordFilter()
 	//配置pprof性能监控，在本地的6060端口监控
 	startPProfServer()
 

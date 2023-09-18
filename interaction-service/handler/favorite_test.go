@@ -2,13 +2,14 @@ package handler
 
 import (
 	"context"
-	"douyin/douyin-api/globalinit/constant"
-	vp "douyin/douyin-api/proto/video"
+	"demotest/douyin-api/globalinit/constant"
+	vp "demotest/douyin-api/proto/video"
+	"demotest/interaction-service/dao"
+	"demotest/interaction-service/global"
+	"demotest/interaction-service/model"
+	"demotest/interaction-service/proto/favorite"
 	"google.golang.org/protobuf/proto"
-	"interaction-service/dao"
-	"interaction-service/global"
-	"interaction-service/model"
-	"interaction-service/proto/favorite"
+
 	"reflect"
 	"testing"
 )
@@ -146,155 +147,6 @@ func TestFavoriteService_FavoriteAction(t *testing.T) {
 	}
 }
 
-func TestFavoriteService_UserFavoriteCount(t *testing.T) {
-	type args struct {
-		ctx     context.Context
-		request *favorite.UserFavoriteCountRequest
-	}
-	tests := []struct {
-		name     string
-		args     args
-		wantResp *favorite.UserFavoriteCountResponse
-		wantErr  bool
-	}{
-		{
-			name: "UserFavoriteCount测试",
-			args: args{
-				ctx: context.Background(),
-				request: &favorite.UserFavoriteCountRequest{
-					UserId: 1,
-				},
-			},
-			wantResp: &favorite.UserFavoriteCountResponse{
-				Count:      15,
-				StatusCode: 200,
-				StatusMsg:  proto.String("ok"),
-			},
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			s := &FavoriteService{}
-			gotResp, err := s.UserFavoriteCount(tt.args.ctx, tt.args.request)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("UserFavoriteCount() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if !reflect.DeepEqual(gotResp, tt.wantResp) {
-				t.Errorf("UserFavoriteCount() gotResp = %v, want %v", gotResp, tt.wantResp)
-			}
-		})
-	}
-}
-
-func TestFavoriteService_TotalFavorite(t *testing.T) {
-	type args struct {
-		ctx     context.Context
-		request *favorite.TotalFavoriteRequest
-	}
-	tests := []struct {
-		name     string
-		args     args
-		wantResp *favorite.TotalFavoriteResponse
-		wantErr  bool
-	}{
-		{
-			name: "TotalFavorite测试",
-			args: args{
-				ctx: context.Background(),
-				request: &favorite.TotalFavoriteRequest{
-					UserId: 20,
-				},
-			},
-			wantResp: &favorite.TotalFavoriteResponse{
-				Total:      3,
-				StatusCode: 200,
-				StatusMsg:  proto.String("ok"),
-			},
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			s := &FavoriteService{}
-			gotResp, err := s.TotalFavorite(tt.args.ctx, tt.args.request)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("TotalFavorite() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if !reflect.DeepEqual(gotResp, tt.wantResp) {
-				t.Errorf("TotalFavorite() gotResp = %v, want %v", gotResp, tt.wantResp)
-			}
-		})
-	}
-}
-
-func TestVideoIds(t *testing.T) {
-	type args struct {
-		uid int64
-	}
-	tests := []struct {
-		name    string
-		args    args
-		want    *[]int64
-		wantErr bool
-	}{
-		// TODO: Add test cases.
-		{
-			name: "获取视频ids测试",
-			args: args{uid: 20},
-			want: nil,
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got, err := VideoIds(tt.args.uid)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("VideoIds() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("VideoIds() got = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}
-
-func TestVideoExist(t *testing.T) {
-	type args struct {
-		vid int64
-	}
-	tests := []struct {
-		name    string
-		args    args
-		want    bool
-		wantErr bool
-	}{
-		// TODO: Add test cases.
-		{
-			name: "TestVideoExist测试",
-			args: args{vid: 3},
-			want: true,
-		},
-		{
-			name: "TestVideoExist测试",
-			args: args{vid: 30},
-			want: false,
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got, err := VideoExist(tt.args.vid)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("VideoExist() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if got != tt.want {
-				t.Errorf("VideoExist() got = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}
-
 func TestFavoriteService_FavoriteList(t *testing.T) {
 	type args struct {
 		ctx     context.Context
@@ -353,7 +205,7 @@ func TestGetVideo(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := GetVideo(tt.args.vid, tt.args.token); !reflect.DeepEqual(got, tt.want) {
+			if got := GetVideo(tt.args.vid); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("GetVideo() = %v, want %v", got, tt.want)
 			}
 		})

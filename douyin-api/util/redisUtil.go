@@ -2,13 +2,16 @@ package util
 
 import (
 	"demotest/douyin-api/global"
+	"demotest/douyin-api/globalinit/constant"
 	pb "demotest/douyin-api/proto/user"
 	"errors"
 	"fmt"
+	"strconv"
+	"time"
+
 	"github.com/go-redis/redis"
 	_ "github.com/go-sql-driver/mysql"
 	"go.uber.org/zap"
-	"strconv"
 )
 
 // Video 结构体定义，与数据库表映射
@@ -24,11 +27,9 @@ const (
 	VideoRedisPrefix = "video:"
 	UserRedisPrefix  = "user:"
 )
-
 func init() {
 	client = global.RS
 }
-
 // InitRedisData 初始化操作：查询数据库并将数据存入 Redis
 func InitRedisData() {
 	var videos []Video
@@ -58,6 +59,20 @@ func InitRedisData() {
 		}
 		client.HMSet(key, data)
 	}
+	zap.S().Infof("Redis初始化成功，定时任务开始执行")
+	go func() {
+		ticker := time.NewTicker(constant.RedisUpdateTime * time.Second)
+		defer ticker.Stop()
+		for {
+			select {
+			case <-ticker.C:
+				zap.S().Infof("redis开始写入mysql")
+				WriteRedisVideoToMySQL()
+				WriteRedisUserToMySQL()
+				zap.S().Infof("写入完成")
+			}
+		}
+	}()
 }
 
 // WriteRedisVideoToMySQL 将 Redis 数据写入 MySQL 数据库
@@ -134,7 +149,7 @@ func WriteRedisUserToMySQL() {
 
 		//仅在数据有变化才更新Mysql
 		if statusChanged == "true" {
-			totalFavorited, favoriteCount, followerCount, followCount, err := getUserAllUserData(userID)
+			totalFavorited, favoriteCount, followerCount, followCount, err := GetUserAllUserData(userID)
 
 			updateData := map[string]interface{}{
 				"total_favorited": totalFavorited,
@@ -276,7 +291,7 @@ func GetVideoFavoriteAndCommentCount(videoID int64) (int64, int64, error) {
 	return favoriteCount, commentCount, nil
 }
 
-func getUserAllUserData(userID int64) (int64, int64, int64, int64, error) {
+func GetUserAllUserData(userID int64) (int64, int64, int64, int64, error) {
 
 	key := UserRedisPrefix + fmt.Sprintf("%d", userID)
 	data, err := client.HGetAll(key).Result()

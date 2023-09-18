@@ -11,7 +11,7 @@ func InitCommentRouter(Router *gin.RouterGroup) {
 	CommentRouter := Router.Group("/douyin/comment/")
 	zap.S().Info("配置评论相关的url")
 	{
-		CommentRouter.POST("action/", util.AuthMiddleware(), api.CommentAction)
-		CommentRouter.GET("list/", util.AuthMiddleware(), api.CommentList)
+		CommentRouter.POST("action/", util.CommentMiddleware(), api.CommentAction)
+		CommentRouter.GET("list/", api.CommentList)
 	}
 }

@@ -1,0 +1,22 @@
+{ pkgs ? import <nixpkgs-23.05> {} }: 
+pkgs.mkShell {
+    shellHook = ''
+        alias ll="ls -l"
+        export PS1="\[\e[0m\]\w\[\e[0m\]#\[\e[0m\] "
+        export LANG=en_US.UTF-8
+        export GO111MODULE=on
+        export GOPROXY=https://goproxy.cn,direct
+        export PATH=$PATH:~/go/bin
+    '';
+    packages = [
+        # env
+        pkgs.go
+	pkgs.mysql80
+        pkgs.redis
+        pkgs.postgresql
+      pkgs.ffmpeg
+  # lsp
+        pkgs.gopls
+        pkgs.glibcLocales
+    ];
+}

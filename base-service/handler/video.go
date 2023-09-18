@@ -210,15 +210,8 @@ type Attention struct {
 }
 
 func (s *VideoServe) VideoStream(ctx context.Context, req *vpb.VideoStreamReq) (*vpb.VideoStreamResp, error) {
-	/*
-	   1.如果没有传递时间的参数，将时间倒序排列查询每次查询只查询3条记录，demo
-	   2.如果有时间的参数那就按照时间来倒序查找然后将每次最后一条视频的创建时间当作下一次请求的时间
-	   3.查询videolist的时候还需要查询作者的信息
-	   question:如何知道是拿一个用户的第几次请求？？？
-	*/
 	uid := global.RS.Get(req.Token).Val()
 	Intuid, _ := strconv.Atoi(uid)
-	//如果在redis中查询不出来就直接返回
 	resp := vpb.VideoStreamResp{}
 	page := 1     // 当前页数
 	pageSize := 3 // 每页记录数
@@ -254,7 +247,7 @@ func (s *VideoServe) VideoStream(ctx context.Context, req *vpb.VideoStreamReq) (
 	if result.Error != nil {
 		// 处理查询错误
 	}
-	//定义返回的protobuf
+
 	var newvideos []Video
 	// 处理查询结果
 	for _, video := range videos {
