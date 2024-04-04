@@ -839,3 +839,20 @@ runtime error: invalid memory address or nil pointer dereference
 2024-04-04T21:16:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
 2024-04-04T21:16:59.253+0800	INFO	util/redisUtil.go:72	写入完成
 [GIN] 2024/04/04 - 21:17:00 | 404 |         731ns |  202.100.25.157 | GET      "/"
+[GIN] 2024/04/04 - 21:17:00 | 404 |         672ns |  202.100.25.157 | GET      "/"
+2024-04-04T21:17:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:04.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:17:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:17:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:17:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:17:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:17:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:17:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:17:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:17:39.252+0800	INFO	util/redisUtil.go:72	写入完成
