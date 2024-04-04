@@ -9,6 +9,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"strconv"
+			"net/http"
 )
 
 var (
@@ -33,8 +34,8 @@ func FavoriteList(ctx *gin.Context) {
 	userIdStr = ctx.Query("user_id")
 	id, err := strconv.ParseInt(userIdStr, 10, 64)
 	if err != nil {
-		zap.S().Errorw("uid错误：", userIdStr)
-		ctx.JSON(constant.CommentActionErrCode, gin.H{
+		zap.S().Error("uid错误：", userIdStr)
+		ctx.JSON(http.StatusInternalServerError, gin.H{
 			"error": constant.ErrorMsg,
 		})
 		return

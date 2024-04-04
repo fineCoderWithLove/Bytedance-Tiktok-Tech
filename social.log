@@ -1,1 +1,1 @@
-syscall: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
+ip: 127.0.0.1  port: 8886  Service is running

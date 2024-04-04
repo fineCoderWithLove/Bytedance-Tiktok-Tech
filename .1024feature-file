@@ -973,3 +973,5 @@ fileChangeLogs:
   - 20230915174353_扣篮.mp4
   - 20230915174353.jpg
   - douyin-api/util/middleware.go
+  - base-service/cmd/main.go
+  - base-service/handler/user.go

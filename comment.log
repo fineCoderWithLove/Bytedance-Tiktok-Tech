@@ -1,3 +1,2 @@
-golang.org/x/sys/unix: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
-testing: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
-go/types: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
+2024-04-04T20:51:37.201+0800	INFO	global/loggerInit.go:18	日志服务启动
+2024-04-04T20:51:37.379+0800	INFO	comment/comment.go:26	CommentServiceClient	{"Addr: ": "127.0.0.1:8882"}

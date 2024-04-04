@@ -17,6 +17,7 @@ import (
 	"os/exec"
 	"strconv"
 	"time"
+	"google.golang.org/grpc/keepalive"
 )
 
 var accessKey = "VWgOopLKiABRZUwFG57_AcJ-dpJm9S31S0IQqqDg"
@@ -280,10 +281,16 @@ func VideoStream(ctx *gin.Context) {
 */
 func VideoList(ctx *gin.Context) {
 	zap.S().Info("[api]开始调用【VideoList】方法")
-	videoconn, err := grpc.Dial("127.0.0.1:8887", grpc.WithInsecure())
-	if err != nil {
-		zap.S().Errorw("[VideoList]连接【base-service】失败，检查网络或者端口", "msg", err.Error())
-	}
+	videoconn, err := grpc.Dial(
+		"127.0.0.1:8887",
+		grpc.WithInsecure(),
+		grpc.WithKeepaliveParams(
+			keepalive.ClientParameters{
+				Time:                30 * time.Second, // 客户端发送 keep-alive ping 的时间间隔
+				Timeout:             20 * time.Second, // 客户端等待 keep-alive ping 的响应超时时间
+				PermitWithoutStream: true,             // 允许在没有活动流的情况下发送 keep-alive ping
+			}),
+	)
 	defer videoconn.Close()
 	// 生成 gRPC 客户端调用接口
 	baseSrvClient := vpb.NewVideoServiceClient(videoconn)

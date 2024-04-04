@@ -5,11 +5,13 @@ import (
 	"demotest/douyin-api/globalinit/constant"
 	"demotest/douyin-api/proto/comment"
 	"fmt"
+	"strconv"
+			"net/http"
+
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-	"strconv"
 )
 
 var (
@@ -118,7 +120,7 @@ func CommentAction(ctx *gin.Context) {
 	resp, err := commentServiceClient.CommentAction(ctx, req)
 	if err != nil {
 		zap.S().Errorw("CommentAction调用失败")
-		ctx.JSON(constant.CommentActionErrCode, gin.H{
+		ctx.JSON(http.StatusInternalServerError, gin.H{
 			"error": constant.ErrorMsg,
 		})
 		return

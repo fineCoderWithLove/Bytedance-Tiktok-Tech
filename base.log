@@ -1,2 +1,70 @@
-net: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
-google.golang.org/protobuf/internal/impl: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
+ip: 127.0.0.1  port: 8887  Service is running
+
+2024/04/04 20:51:59 [32m/home/runner/app/base-service/handler/video.go:241
+[0m[33m[50.075ms] [34;1m[rows:3][0m SELECT * FROM `videos` WHERE created_time < ? ORDER BY created_time DESC LIMIT 3
+
+2024/04/04 20:51:59 [31;1m/home/runner/app/base-service/handler/video.go:259 [35;1mError 1054 (42S22): Unknown column 'user.id' in 'where clause'
+[0m[33m[24.759ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE `user`.`id` = ?
+
+2024/04/04 20:51:59 [31;1m/home/runner/app/base-service/handler/video.go:259 [35;1mError 1054 (42S22): Unknown column 'user.id' in 'where clause'
+[0m[33m[24.835ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE `user`.`id` = ?
+
+2024/04/04 20:51:59 [31;1m/home/runner/app/base-service/handler/video.go:259 [35;1mError 1054 (42S22): Unknown column 'user.id' in 'where clause'
+[0m[33m[24.804ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE `user`.`id` = ?
+
+2024/04/04 20:51:59 [32m/home/runner/app/base-service/handler/video.go:272
+[0m[33m[49.825ms] [34;1m[rows:0][0m SELECT * FROM `attention` WHERE user_id = ? AND to_user_id = ?
+
+2024/04/04 20:51:59 [31;1m/home/runner/app/base-service/util/redisUtil.go:286 [35;1mError 1054 (42S22): Unknown column 'id' in 'where clause'
+[0m[33m[24.899ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE id = ? ORDER BY `user`.`id` LIMIT 1
+
+2024/04/04 20:51:59 [32m/home/runner/app/base-service/handler/video.go:272
+[0m[33m[49.726ms] [34;1m[rows:0][0m SELECT * FROM `attention` WHERE user_id = ? AND to_user_id = ?
+
+2024/04/04 20:51:59 [31;1m/home/runner/app/base-service/util/redisUtil.go:286 [35;1mError 1054 (42S22): Unknown column 'id' in 'where clause'
+[0m[33m[24.910ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE id = ? ORDER BY `user`.`id` LIMIT 1
+
+2024/04/04 20:51:59 [32m/home/runner/app/base-service/handler/video.go:272
+[0m[33m[49.831ms] [34;1m[rows:0][0m SELECT * FROM `attention` WHERE user_id = ? AND to_user_id = ?
+
+2024/04/04 20:51:59 [31;1m/home/runner/app/base-service/util/redisUtil.go:286 [35;1mError 1054 (42S22): Unknown column 'id' in 'where clause'
+[0m[33m[24.848ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE id = ? ORDER BY `user`.`id` LIMIT 1
+0
+
+2024/04/04 20:52:00 [32m/home/runner/app/base-service/handler/video.go:241
+[0m[33m[49.939ms] [34;1m[rows:3][0m SELECT * FROM `videos` WHERE created_time < ? ORDER BY created_time DESC LIMIT 3
+
+2024/04/04 20:52:00 [31;1m/home/runner/app/base-service/handler/video.go:259 [35;1mError 1054 (42S22): Unknown column 'user.id' in 'where clause'
+[0m[33m[24.756ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE `user`.`id` = ?
+
+2024/04/04 20:52:00 [31;1m/home/runner/app/base-service/handler/video.go:259 [35;1mError 1054 (42S22): Unknown column 'user.id' in 'where clause'
+[0m[33m[24.835ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE `user`.`id` = ?
+
+2024/04/04 20:52:00 [31;1m/home/runner/app/base-service/handler/video.go:259 [35;1mError 1054 (42S22): Unknown column 'user.id' in 'where clause'
+[0m[33m[24.825ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE `user`.`id` = ?
+
+2024/04/04 20:52:00 [32m/home/runner/app/base-service/handler/video.go:272
+[0m[33m[49.771ms] [34;1m[rows:0][0m SELECT * FROM `attention` WHERE user_id = ? AND to_user_id = ?
+
+2024/04/04 20:52:00 [31;1m/home/runner/app/base-service/util/redisUtil.go:286 [35;1mError 1054 (42S22): Unknown column 'id' in 'where clause'
+[0m[33m[24.823ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE id = ? ORDER BY `user`.`id` LIMIT 1
+
+2024/04/04 20:52:00 [32m/home/runner/app/base-service/handler/video.go:272
+[0m[33m[49.730ms] [34;1m[rows:0][0m SELECT * FROM `attention` WHERE user_id = ? AND to_user_id = ?
+
+2024/04/04 20:52:00 [31;1m/home/runner/app/base-service/util/redisUtil.go:286 [35;1mError 1054 (42S22): Unknown column 'id' in 'where clause'
+[0m[33m[24.812ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE id = ? ORDER BY `user`.`id` LIMIT 1
+
+2024/04/04 20:52:00 [32m/home/runner/app/base-service/handler/video.go:272
+[0m[33m[49.906ms] [34;1m[rows:0][0m SELECT * FROM `attention` WHERE user_id = ? AND to_user_id = ?
+
+2024/04/04 20:52:00 [31;1m/home/runner/app/base-service/util/redisUtil.go:286 [35;1mError 1054 (42S22): Unknown column 'id' in 'where clause'
+[0m[33m[24.835ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE id = ? ORDER BY `user`.`id` LIMIT 1
+
+2024/04/04 20:52:08 [31;1m/home/runner/app/base-service/handler/user.go:62 [35;1mError 1054 (42S22): Unknown column 'name' in 'where clause'
+[0m[33m[25.384ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE name = ? ORDER BY `user`.`id` LIMIT 1
+2024/04/04 20:52:08 ERROR: [core] [Server #1] grpc: server failed to encode response: rpc error: code = Internal desc = grpc: error while marshaling: proto: Marshal called with nil
+
+2024/04/04 20:53:43 [31;1m/home/runner/app/base-service/handler/user.go:62 [35;1mError 1054 (42S22): Unknown column 'name' in 'where clause'
+[0m[33m[24.962ms] [34;1m[rows:0][0m SELECT * FROM `user` WHERE name = ? ORDER BY `user`.`id` LIMIT 1
+2024/04/04 20:53:43 ERROR: [core] [Server #1] grpc: server failed to encode response: rpc error: code = Internal desc = grpc: error while marshaling: proto: Marshal called with nil

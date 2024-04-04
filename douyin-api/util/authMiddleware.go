@@ -11,7 +11,9 @@ func AuthMiddleware() gin.HandlerFunc {
 		// 从请求头中获取 Authorization 字段
 		token := c.Query("token")
 		if token == "" {
-			c.JSON(http.StatusUnauthorized, gin.H{"error": "Missing token"})
+			c.JSON(http.StatusOK, gin.H{"status_msg": "您尚未登录",
+																	"status_code":"401",
+																 })
 			c.Abort()
 			return
 		}

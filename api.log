@@ -1,3 +1,841 @@
-golang.org/x/sys/unix: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
-math/big: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
-gopkg.in/yaml.v3: /nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/pkg/tool/linux_amd64/compile: signal: killed
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+2024-04-04T20:51:37.172+0800	INFO	router/favorite.go:12	配置点赞相关的url
+[GIN-debug] POST   /douyin/favorite/action/  --> demotest/douyin-api/api.FavoriteAction (4 handlers)
+[GIN-debug] GET    /douyin/favorite/list/    --> demotest/douyin-api/api.FavoriteList (4 handlers)
+2024-04-04T20:51:37.172+0800	INFO	router/comment.go:12	配置评论相关的url
+[GIN-debug] POST   /douyin/comment/action/   --> demotest/douyin-api/api.CommentAction (4 handlers)
+[GIN-debug] GET    /douyin/comment/list/     --> demotest/douyin-api/api.CommentList (3 handlers)
+2024-04-04T20:51:37.172+0800	INFO	router/user.go:21	配置用户相关的url
+[GIN-debug] GET    /douyin/user/             --> demotest/douyin-api/api.GetUserDetail (3 handlers)
+[GIN-debug] POST   /douyin/user/register/    --> demotest/douyin-api/api.UserRegister (4 handlers)
+[GIN-debug] POST   /douyin/user/login/       --> demotest/douyin-api/api.UserLogin (3 handlers)
+[GIN-debug] POST   /douyin/publish/action/   --> demotest/douyin-api/api.VideoPublish (4 handlers)
+[GIN-debug] GET    /douyin/feed/             --> demotest/douyin-api/api.VideoStream (3 handlers)
+[GIN-debug] GET    /douyin/publish/list/     --> demotest/douyin-api/api.VideoList (3 handlers)
+[GIN-debug] POST   /douyin/relation/action/  --> demotest/douyin-api/api.UserRelationAction (3 handlers)
+[GIN-debug] GET    /douyin/relation/follow/list/ --> demotest/douyin-api/api.UserRelationFollowList (3 handlers)
+[GIN-debug] GET    /douyin/relation/follower/list/ --> demotest/douyin-api/api.UserRelationFollowerList (3 handlers)
+[GIN-debug] GET    /douyin/relation/friend/list/ --> demotest/douyin-api/api.UserRelationFriendList (3 handlers)
+[GIN-debug] POST   /douyin/message/action/   --> demotest/douyin-api/api.UserMessageAction (4 handlers)
+[GIN-debug] GET    /douyin/message/chat/     --> demotest/douyin-api/api.UserMessageChat (3 handlers)
+
+2024/04/04 20:51:37 [32m/home/runner/app/douyin-api/util/redisUtil.go:36
+[0m[33m[29.626ms] [34;1m[rows:11][0m SELECT * FROM `videos`
+
+2024/04/04 20:51:37 [32m/home/runner/app/douyin-api/util/redisUtil.go:50
+[0m[33m[29.734ms] [34;1m[rows:40][0m SELECT * FROM `user`
+2024-04-04T20:51:38.829+0800	INFO	util/redisUtil.go:62	Redis初始化成功，定时任务开始执行
+2024-04-04T20:51:38.844+0800	INFO	util/wordFilter.go:174	敏感词过滤器初始化成功
+2024-04-04T20:51:38.844+0800	INFO	cmd/main.go:34	启动服务器,端口: 8080
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+2024-04-04T20:51:38.844+0800	INFO	cmd/main.go:15	启动 pprof 服务
+[GIN] 2024/04/04 - 20:51:39 | 404 |         491ns |  202.100.25.157 | GET      "/"
+2024-04-04T20:51:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:51:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:51:48.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:51:49.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:51:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:51:54.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:51:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:51:59.251+0800	INFO	util/redisUtil.go:72	写入完成
+[GIN-debug] redirecting request 301: /douyin/feed/ --> /douyin/feed/?latest_time=1712235118366
+2024-04-04T20:51:59.322+0800	INFO	api/video.go:238	[api]开始调用【VideoStream】方法
+
+2024/04/04 20:52:00 [32m/home/runner/app/douyin-api/api/video.go:253
+[0m[33m[58.667ms] [34;1m[rows:0][0m SELECT * FROM `favorites` WHERE user_id = ? AND video_id = ? ORDER BY `favorites`.`user_id` LIMIT 1
+
+2024/04/04 20:52:00 [32m/home/runner/app/douyin-api/api/video.go:253
+[0m[33m[58.345ms] [34;1m[rows:0][0m SELECT * FROM `favorites` WHERE user_id = ? AND video_id = ? ORDER BY `favorites`.`user_id` LIMIT 1
+
+2024/04/04 20:52:00 [32m/home/runner/app/douyin-api/api/video.go:253
+[0m[33m[58.311ms] [34;1m[rows:0][0m SELECT * FROM `favorites` WHERE user_id = ? AND video_id = ? ORDER BY `favorites`.`user_id` LIMIT 1
+2023-09-06 17:23:41
+[id:42 author:{} play_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906173659_share_b272f27887143f8e7dc139fb32c6d4f3.mp4" cover_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906173700.jpg" title:"鸡你太美" id:41 author:{} play_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906173353_mmexport1693877684436.mp4" cover_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906173354.jpg" title:"🤔🤔🤔" id:37 author:{} play_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906172337_VIDEO_20230906_172030596.mp4" cover_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906172340.jpg" title:"👿"]
+[GIN] 2024/04/04 - 20:52:00 | 200 |  821.004827ms |  202.100.25.157 | GET      "/douyin/feed/?latest_time=1712235118366"
+[GIN-debug] redirecting request 301: /douyin/feed/ --> /douyin/feed/?latest_time=1693992221
+[GIN] 2024/04/04 - 20:52:00 | 200 |      19.296µs |  202.100.25.157 | GET      "/douyin/favorite/list/?token=&user_id=0"
+2024-04-04T20:52:00.315+0800	INFO	api/video.go:283	[api]开始调用【VideoList】方法
+[GIN] 2024/04/04 - 20:52:00 | 200 |     986.258µs |  202.100.25.157 | GET      "/douyin/publish/list/?token=&user_id=0"
+2024-04-04T20:52:00.355+0800	INFO	api/video.go:238	[api]开始调用【VideoStream】方法
+
+2024/04/04 20:52:00 [32m/home/runner/app/douyin-api/api/video.go:253
+[0m[33m[58.380ms] [34;1m[rows:0][0m SELECT * FROM `favorites` WHERE user_id = ? AND video_id = ? ORDER BY `favorites`.`user_id` LIMIT 1
+
+2024/04/04 20:52:01 [32m/home/runner/app/douyin-api/api/video.go:253
+[0m[33m[58.268ms] [34;1m[rows:0][0m SELECT * FROM `favorites` WHERE user_id = ? AND video_id = ? ORDER BY `favorites`.`user_id` LIMIT 1
+
+2024/04/04 20:52:01 [32m/home/runner/app/douyin-api/api/video.go:253
+[0m[33m[58.199ms] [34;1m[rows:0][0m SELECT * FROM `favorites` WHERE user_id = ? AND video_id = ? ORDER BY `favorites`.`user_id` LIMIT 1
+2023-09-05 12:55:52
+[id:36 author:{} play_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906141454_chinesesolfware.mp4" cover_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906141454.jpg" title:"我的南京之旅" id:35 author:{} play_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906132515_VID20230803120848.mp4" cover_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230906132517.jpg" title:"大晴天" id:34 author:{} play_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230905125549_20230830103259_VID20230829234538.mp4" cover_url:"http://s06mo3nyf.hb-bkt.clouddn.com/20230905125550.jpg" title:"作品线上测试"]
+[GIN] 2024/04/04 - 20:52:01 | 200 |   761.01394ms |  202.100.25.157 | GET      "/douyin/feed/?latest_time=1693992221"
+2024-04-04T20:52:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:04.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:08.509+0800	INFO	api/user.go:52	[api]开始调用【UserRegister】方法
+2024-04-04T20:52:08.536+0800	ERROR	api/user.go:65	[api]调用【UserRegister】接口失败	{"msg": "rpc error: code = Internal desc = grpc: error while marshaling: proto: Marshal called with nil"}
+demotest/douyin-api/api.UserRegister
+	/home/runner/app/douyin-api/api/user.go:65
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+demotest/douyin-api/util.UserRegisterMiddleware.func1
+	/home/runner/app/douyin-api/util/middleware.go:66
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:1995
+
+
+[31m2024/04/04 20:52:08 [Recovery] 2024/04/04 - 20:52:08 panic recovered:
+POST /douyin/user/register/?username=zfx&password=123456 HTTP/1.1
+Host: 49a8ced677a4c7983270fb42f898be98-app.1024paas.com
+Accept-Encoding: gzip
+Connection: keep-alive
+Content-Length: 0
+User-Agent: okhttp/3.14.9
+X-Client-Proto: https
+X-Client-Proto-Ver: HTTP/2.0
+X-Forwarded-For: 202.100.25.157, 10.0.14.221
+X-Forwarded-Host: 49a8ced677a4c7983270fb42f898be98-app.1024paas.com
+X-Forwarded-Path: /douyin/user/register/
+X-Forwarded-Port: 8000
+X-Forwarded-Proto: http
+X-Forwarded-Server: traefik
+X-Forwarded-Ssl: on
+X-Real-Ip: 10.0.14.221
+X-Stgw-Time: 1712235128.503
+
+
+runtime error: invalid memory address or nil pointer dereference
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/runtime/panic.go:260 (0x44fa3c)
+	panicmem: panic(memoryError)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/runtime/signal_unix.go:837 (0x44fa0c)
+	sigpanic: panicmem()
+/home/runner/app/douyin-api/api/user.go:72 (0xbddc07)
+	UserRegister: "status_code": resp.StatusCode,
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbe803b)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/app/douyin-api/util/middleware.go:66 (0xbe8027)
+	UserRegisterMiddleware.func1: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbae521)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102 (0xbae50c)
+	CustomRecoveryWithWriter.func1: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbad646)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 (0xbad629)
+	LoggerWithConfig.func1: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbac6aa)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 (0xbac331)
+	(*Engine).handleHTTPRequest: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 (0xbabe5c)
+	(*Engine).ServeHTTP: engine.handleHTTPRequest(c)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:2936 (0x71eb55)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:1995 (0x71a071)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/runtime/asm_amd64.s:1598 (0x46e420)
+	goexit: BYTE	$0x90	// NOP
+[0m
+[GIN] 2024/04/04 - 20:52:08 | 500 |   30.949316ms |  202.100.25.157 | POST     "/douyin/user/register/?username=zfx&password=123456"
+2024-04-04T20:52:08.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:14.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:19.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:24.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:29.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:33.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:34.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:38.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:49.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:54.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:52:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:52:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:04.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:29.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:34.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:39.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:43.786+0800	INFO	api/user.go:52	[api]开始调用【UserRegister】方法
+2024-04-04T20:53:43.812+0800	ERROR	api/user.go:65	[api]调用【UserRegister】接口失败	{"msg": "rpc error: code = Internal desc = grpc: error while marshaling: proto: Marshal called with nil"}
+demotest/douyin-api/api.UserRegister
+	/home/runner/app/douyin-api/api/user.go:65
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+demotest/douyin-api/util.UserRegisterMiddleware.func1
+	/home/runner/app/douyin-api/util/middleware.go:66
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:1995
+
+
+[31m2024/04/04 20:53:43 [Recovery] 2024/04/04 - 20:53:43 panic recovered:
+POST /douyin/user/register/?username=zfx&password=123456 HTTP/1.1
+Host: 49a8ced677a4c7983270fb42f898be98-app.1024paas.com
+Accept-Encoding: gzip
+Connection: keep-alive
+Content-Length: 0
+User-Agent: okhttp/3.14.9
+X-Client-Proto: https
+X-Client-Proto-Ver: HTTP/2.0
+X-Forwarded-For: 202.100.25.157, 10.0.14.221
+X-Forwarded-Host: 49a8ced677a4c7983270fb42f898be98-app.1024paas.com
+X-Forwarded-Path: /douyin/user/register/
+X-Forwarded-Port: 8000
+X-Forwarded-Proto: http
+X-Forwarded-Server: traefik
+X-Forwarded-Ssl: on
+X-Real-Ip: 10.0.14.221
+X-Stgw-Time: 1712235223.778
+
+
+runtime error: invalid memory address or nil pointer dereference
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/runtime/panic.go:260 (0x44fa3c)
+	panicmem: panic(memoryError)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/runtime/signal_unix.go:837 (0x44fa0c)
+	sigpanic: panicmem()
+/home/runner/app/douyin-api/api/user.go:72 (0xbddc07)
+	UserRegister: "status_code": resp.StatusCode,
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbe803b)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/app/douyin-api/util/middleware.go:66 (0xbe8027)
+	UserRegisterMiddleware.func1: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbae521)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102 (0xbae50c)
+	CustomRecoveryWithWriter.func1: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbad646)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 (0xbad629)
+	LoggerWithConfig.func1: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xbac6aa)
+	(*Context).Next: c.handlers[c.index](c)
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 (0xbac331)
+	(*Engine).handleHTTPRequest: c.Next()
+/home/runner/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 (0xbabe5c)
+	(*Engine).ServeHTTP: engine.handleHTTPRequest(c)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:2936 (0x71eb55)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/net/http/server.go:1995 (0x71a071)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/nix/store/8v5zwymidmry0wd3lhj6zggskzsvqrfk-go-1.20.4/share/go/src/runtime/asm_amd64.s:1598 (0x46e420)
+	goexit: BYTE	$0x90	// NOP
+[0m
+[GIN] 2024/04/04 - 20:53:43 | 500 |   31.031621ms |  202.100.25.157 | POST     "/douyin/user/register/?username=zfx&password=123456"
+2024-04-04T20:53:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:54.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:53:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:53:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:08.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:09.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:14.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:19.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:29.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:33.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:49.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:54.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:54:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:54:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:04.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:09.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:14.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:19.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:29.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:49.257+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:55:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:55:59.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:03.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:08.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:19.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:33.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:48.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:49.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:56:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:56:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:04.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:19.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:24.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:29.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:38.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:39.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:54.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:57:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:57:59.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:14.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:19.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:24.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:29.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:38.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:48.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:58:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:58:59.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:04.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:08.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:14.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:24.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:39.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:54.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T20:59:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T20:59:59.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:04.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:08.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:09.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:29.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:44.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:49.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:00:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:00:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:09.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:14.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:19.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:39.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:01:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:01:59.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:04.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:08.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:19.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:24.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:34.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:39.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:44.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:49.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:02:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:02:59.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:04.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:09.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:14.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:24.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:03:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:03:59.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:08.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:29.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:53.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:54.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:04:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:04:59.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:09.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:34.256+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:44.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:49.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:05:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:05:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:09.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:24.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:29.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:38.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:39.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:44.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:06:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:06:59.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:34.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:39.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:48.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:49.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:07:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:07:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:14.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:19.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:34.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:49.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:08:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:08:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:48.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:49.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:09:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:09:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:19.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:44.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:10:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:10:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:29.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:33.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:34.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:11:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:11:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:09.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:19.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:24.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:29.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:44.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:48.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:12:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:12:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:14.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:19.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:24.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:39.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:13:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:13:59.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:13.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:14.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:18.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:19.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:23.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:29.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:39.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:43.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:44.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:49.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:14:58.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:14:59.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:04.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:09.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:14.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:19.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:24.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:28.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:29.255+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:33.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:34.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:39.254+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:49.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:15:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:15:59.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:03.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:04.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:08.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:09.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:13.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:14.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:18.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:19.251+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:23.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:24.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:28.829+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:29.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:33.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:34.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:38.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:39.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:43.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:44.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:48.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:49.253+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:53.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:54.252+0800	INFO	util/redisUtil.go:72	写入完成
+2024-04-04T21:16:58.830+0800	INFO	util/redisUtil.go:69	redis开始写入mysql
+2024-04-04T21:16:59.253+0800	INFO	util/redisUtil.go:72	写入完成
+[GIN] 2024/04/04 - 21:17:00 | 404 |         731ns |  202.100.25.157 | GET      "/"

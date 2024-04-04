@@ -7,8 +7,10 @@ import (
 	"flag"
 	"fmt"
 	"net"
+	"time"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/keepalive"
 )
 
 func main() {
@@ -18,7 +20,12 @@ func main() {
 	fmt.Print("ip: ", *IP)
 	fmt.Print("  port: ", *Port)
 	fmt.Println("  Service is running")
-	server := grpc.NewServer()
+	server := grpc.NewServer(
+		grpc.KeepaliveEnforcementPolicy(keepalive.EnforcementPolicy{
+			MinTime:             5 * time.Second, // 服务器在收到 keep-alive ping 后的最小等待时间
+			PermitWithoutStream: true,            // 允许在没有活动流的情况下发送 keep-alive ping
+		}),
+	)
 	//pb.RegisterUserServer(server,&handler.UserServe{})
 	pb.RegisterUserServiceServer(server, &handler.UserServe{})
 	vpb.RegisterVideoServiceServer(server, &handler.VideoServe{})
